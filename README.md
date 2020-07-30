@@ -11,9 +11,9 @@ See [this page](https://docs.filecoin.io/how-to/networks/) on the Filecoin Docum
 For each Filecoin network, we include the following information:
 - Network name
 - Network status:
-  - 🔴: Network down for all participants
-  - 🟡: Network is unstable (down for some participants, but not all)
-  - 🟢: Network up and stable
+  - 🔴 Network down for all participants
+  - 🟡 Network is unstable (down for some participants, but not all)
+  - 🟢 Network up and stable
 - Link to the genesis CAR files for the network
 - Link to the faucet for the network (if the network is not `mainnet`)
 - Supported sector sizes on this network
