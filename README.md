@@ -6,7 +6,7 @@ This repo contains information about all the active Filecoin networks. To follow
 
 See [this page](https://docs.filecoin.io/how-to/networks/) on the Filecoin Documentation Site.
 
-## Network Data Model
+## Network Information Data Model
 
 For each Filecoin network, we include the following information:
 - Network name
