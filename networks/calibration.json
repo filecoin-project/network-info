@@ -1,6 +1,7 @@
 {
   "Name":"calibration",
   "Purpose":"For miners to prepare for the Space Race (recommended for most miners)",
+  "Maintainer": "Protocol Labs",
   "Stability": "moderate",
   "Status": "online",
   "NetworkParameters":{
