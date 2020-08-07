@@ -133,6 +133,12 @@
     "Git": {
       "type": "object",
       "properties": {
+        "Base": {
+          "type": "string",
+          "examples": [
+            "https://github.com/filecoin-project/lotus/tree/"
+          ]
+        },
         "Commit": {
           "type": "string",
           "examples": [
