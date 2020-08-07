@@ -70,7 +70,7 @@
             "2147483648"
           ]
         },
-        "BlockDelay": {
+        "EpochDurationSeconds": {
           "type": "integer",
           "examples": [
             25

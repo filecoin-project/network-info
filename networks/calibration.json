@@ -23,7 +23,7 @@
       }
     ],
     "ConsensusMinerMinPower": "2147483648",
-    "BlockDelay": 25,
+    "EpochDurationSeconds": 25,
     "ExpectedLeaderPerEpoch": 5,
     "WPoStProvingPeriod": 3456,
     "WPoStChallengeWindow": 72,
