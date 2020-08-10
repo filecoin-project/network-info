@@ -25,3 +25,26 @@ Information for each network is stored in a JSON file. Currently information for
 - `nerpa` network: https://www.nerpa.fildev.network/
 - `butterfly` network: https://www.butterfly.fildev.network/
 - `calibration` network: https://www.calibration.fildev.network/
+
+## Build & Deploy
+
+This application builds a static site using Nuxt.js/Vue.js.
+
+### Nuxt settings
+- Remove `mode` property from `nuxt.config.js`
+- Set `target: 'static'` in `nuxt.config.js`
+
+### Fleek configuration
+- Build command: `npm ci && npm run generate`
+- Publish directory: `dist`
+- Environment variables:
+  - NODE_ENV=production
+
+### Deployment process
+- Commit to a repo on GitHub
+- Login to Fleek, click on "Hosting" and click on "Add new site"
+- Connect your GitHub repo
+- Select NuxtJS as the framework
+- Input the settings as defined in `#fleek-settings`
+- Select "Deploy Site"
+- 🎉
