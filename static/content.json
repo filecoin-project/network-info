@@ -1,0 +1,25 @@
+{
+  "seo": {
+    "title": "Network Status | Filecoin",
+    "description": "Network status for Filecoin. Filecoin is A decentralized storage network for humanity's most important information."
+  },
+  "og": {
+    "title": "Network Status | Filecoin",
+    "site_name": "Filecoin",
+    "url": "",
+    "type": "website",
+    "description": "Network status for Filecoin. Filecoin is A decentralized storage network for humanity's most important information.",
+    "image": "//filecoin.io/uploads/filecoin-event-logo_hu6a2463dfb0e5db625fbb30b3b721a591_100884_400x0_resize_q90_linear.jpg"
+  },
+  "navigation": {
+    "links": [
+      { "href": "//docs.filecoin.io", "label": "Docs", "current": false, "logo": false },
+      { "href": "//discuss.filecoin.io", "label": "Community", "current": false, "logo": false },
+      { "href": "#", "label": "Network Info", "current": true, "logo": false },
+      { "href": "/", "label": "", "current": false, "logo": true },
+      { "href": "//filecoin.io", "label": "filecoin.io", "current": false, "logo": false },
+      { "href": "//twitter.com/filecoin", "label": "Twitter", "current": false, "logo": false },
+      { "href": "//filecoin.io/slack", "label": "Slack", "current": false, "logo": false }
+    ]
+  }
+}
