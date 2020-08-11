@@ -49,8 +49,8 @@ import AccordionTab from '@/components/Shared/AccordionTab'
 import ContentData from '@/static/content.json'
 
 const getData = async (store) => {
-  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/feat/network-schema/schemas/network.json')
-  const calibrationData = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/feat/network-schema/networks/calibration.json')
+  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
+  const calibrationData = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/calibration.json')
   await store.dispatch('global/setNetworkSchema', networkSchema)
   await store.dispatch('global/setCalibrationData', calibrationData)
   await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation) is still being loaded statically! (line 49 above)
