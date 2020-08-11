@@ -492,7 +492,7 @@ $caretBorderWidth: 2px;
       &.contains-object-value,
       &.contains-array-value {
         > .data-section {
-          padding-left: 0.5rem; 
+          padding-left: 0.5rem;
       }
     }
   }
