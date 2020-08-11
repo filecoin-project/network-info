@@ -1,6 +1,7 @@
 <template>
   <section
     v-if="name"
+    ref="section"
     :class="['accordion-tab', { open: selected, 'force-active': forceActive }]"
     :style="{ height }">
     <div class="content-wrapper">
@@ -231,20 +232,22 @@ export default {
 
   watch: {
     active (val) {
-      setHeight(this, val)
+      if (this.$refs.section) { setHeight(this, val) }
     },
     forceActive (val) {
-      setHeight(this, val)
+      if (this.$refs.section) { setHeight(this, val) }
     }
   },
 
   mounted () {
     this.properties = this.networkSchema.properties
-    this.height = this.$refs.panelMain.clientHeight + 'px'
-    // compileMatchList(this)
-    const resizeHandler = () => { setHeight(this, 'resize') }
-    this.resize = this.$throttle(resizeHandler, 100)
-    window.addEventListener('resize', this.resize)
+    if (this.$refs.section) {
+      this.height = this.$refs.panelMain.clientHeight + 'px'
+      // compileMatchList(this)
+      const resizeHandler = () => { setHeight(this, 'resize') }
+      this.resize = this.$throttle(resizeHandler, 100)
+      window.addEventListener('resize', this.resize)
+    }
   },
 
   beforeDestroy () {
