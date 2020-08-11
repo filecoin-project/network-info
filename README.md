@@ -28,14 +28,16 @@ Information for each network is stored in a JSON file. Currently information for
 
 ## Build & Deploy
 
-This application builds a static site using Nuxt.js/Vue.js.
+This application builds a static site using Nuxt.js/Vue.js. The site is generated to the `/dist/` directory during the build process. Only this directory needs to be published.
 
 ### Nuxt settings
 - Remove `mode` property from `nuxt.config.js`
 - Set `target: 'static'` in `nuxt.config.js`
 
 ### Fleek configuration
+- A `.fleek.json` configuration file is included which should pre-populate these settings
 - Build command: `npm ci && npm run generate`
+- Base directory can be left empty
 - Publish directory: `dist`
 - Environment variables:
   - NODE_ENV=production
@@ -44,7 +46,8 @@ This application builds a static site using Nuxt.js/Vue.js.
 - Commit to a repo on GitHub
 - Login to Fleek, click on "Hosting" and click on "Add new site"
 - Connect your GitHub repo
-- Select NuxtJS as the framework
-- Input the settings as defined in `#fleek-settings`
+- The remaining information should populate automatically, however, if it doesn't:
+ - Select NuxtJS as the framework
+ - Input the settings as defined in `#fleek-settings`
 - Select "Deploy Site"
 - 🎉
