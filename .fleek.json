@@ -1,0 +1,11 @@
+{
+ "build": {
+   "image": "fleek/nuxtjs",
+   "command": "npm ci && npm run generate",
+   "publicDir": "dist",
+   "baseDir": "",
+   "environment": {
+     "NODE_ENV": "production"
+   }
+ }
+}
