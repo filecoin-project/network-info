@@ -22,11 +22,11 @@
         "RegisteredSealProof": 4
       }
     ],
-    "ConsensusMinerMinPower": "2147483648",
-    "EpochDurationSeconds": 25,
+    "ConsensusMinerMinPower": "549755813888",
+    "EpochDurationSeconds": 30,
     "ExpectedLeaderPerEpoch": 5,
-    "WPoStProvingPeriod": 3456,
-    "WPoStChallengeWindow": 72,
+    "WPoStProvingPeriod": 2880,
+    "WPoStChallengeWindow": 60,
     "WPoStPeriodDeadlines": 48,
     "PreCommitChallengeDelay": 150
   },
@@ -46,22 +46,22 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"477dd536b5b5824a411c24a710af8f8550eb8fdc",
+    "Commit":"99de61a6f8e08f1b579814d5dc7394b5dfb12730",
     "Branch":"ntwk-calibration",
-    "Tag":"ntwk-calibration-7.29.0"
+    "Tag":"ntwk-calibration-8.8.1"
   },
   "Genesis":{
     "Car": {
-        "/": "QmU6bW4vBFYB74EStK3DqwEPkYYunn1HD5FKZas5deowWA"
+        "/": "QmaKr9ywsKEMu5mRnhXZAC3SiYQXkgBZxZGrzHUUgPKhnP"
     },
-    "Timestamp":"2020-07-29T02:26:00Z",
-    "BlockZeroCid":"bafy2bzacedm25s7nmp4forvpbian3ik36uv4yik2fe7tqzgv6z6xystmi3i5q",
-    "Sha1Digest":"dd1b6f30dc85e2f2f39c24265c41ff735b8a156e"
+    "Timestamp":"2020-08-08T02:41:00Z",
+    "BlockZeroCid":"bafy2bzaceasi7askcrop6x2m6yrdriiuuobnjdvopkxetlcova7fzrzhxnkwq",
+    "Sha1Digest":"db282f33217113e959fcc09b066db65736e2eec4"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWBEDQ5Xwh3JC67yxjNf91pZcpavrAwaqprNzbquC1yj6t",
-    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWKbUF17McnN516w8TjmbkVNkcAZS9LnE5yJwH7pVDYPUJ",
-    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWLbhs34AsH22DF25vLAao4xKbnBp8ZVzz3bbrv9AiATsG",
-    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWQT7zYxZetuYcRsyRiT46SXTV6k1ApGqd9XudCuKTmCmB"
+    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWPmhFGJkE7wDUdtzDYr7ReML9vgzJ8Tv7ubh9T6Le1Bmn",
+    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWGwv2YtXyYPrEKssttUT3TKZknPkCWKR6WVTvt9LW4hdf",
+    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWPWUw5yEet6NWpxhxoibXFbLprG4k5PMLKLeubGBLf6nd",
+    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWHgMU953YxD5skVG3RKa58TXwVL9z5ycGKrZdaFzGpouT"
   ]
 }
