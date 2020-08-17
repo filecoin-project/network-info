@@ -1,0 +1,63 @@
+{
+  "Name":"nerpa",
+  "Purpose":"For developers building apps, with small sector sizes and reduced proofs parameters. Sealing time is ~15-20 minutes. (recommended for most developers)",
+  "Maintainer": "Digital Mob",
+  "Stability": "moderate",
+  "Status": "online",
+  "NetworkParameters":{
+    "SupportedProofTypes":[
+      {
+        "Name":"RegisteredSealProof_StackedDrg512MiBV1",
+        "Size":"536870912",
+        "RegisteredSealProof": 2
+      },
+      {
+        "Name":"RegisteredSealProof_StackedDrg32GiBV1",
+        "Size":"34359738368",
+        "RegisteredSealProof": 3
+      },
+      {
+        "Name":"RegisteredSealProof_StackedDrg64GiBV1",
+        "Size":"68719476736",
+        "RegisteredSealProof": 4
+      }
+    ],
+    "ConsensusMinerMinPower": "1073741824",
+    "EpochDurationSeconds": 30,
+    "ExpectedLeaderPerEpoch": 5,
+    "WPoStProvingPeriod": 2880,
+    "WPoStChallengeWindow": 60,
+    "WPoStPeriodDeadlines": 48,
+    "PreCommitChallengeDelay": 150
+  },
+  "ResourceLinks":[
+    {
+      "Name":"Faucet",
+      "Link":"https://faucet.nerpa.interplanetary.dev/"
+    },
+    {
+      "Name":"Github",
+      "Link": "https://github.com/filecoin-project/lotus"
+    }
+  ],
+  "Git":{
+    "Base": "https://github.com/filecoin-project/lotus/tree/",
+    "Commit":"53c75940400d2add17ec871eb4e002643ebd1e4e",
+    "Branch":"ntwk-nerpa",
+    "Tag":"ntwk-nerpa-8.17.0"
+  },
+  "Genesis":{
+    "Car": {
+        "/": "QmQwy17UdjYUCytVvnoK4mCTPHTzm7HJA5zeaDP5EqFZd8"
+    },
+    "Timestamp":"2020-08-17T07:46:00Z",
+    "BlockZeroCid":"bafy2bzaceazheovo4wqiw5kc2m3eh22ze7zf4hpmjgezleeiph6jounmuam72",
+    "Sha1Digest":"99c1416f706f9384a9e3b4bfef5474f00c9185db"
+  },
+  "BootstrapPeers":[
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWECgvrrRRHpSGmrdLmi8m2JFm7FUvvfcrQxL1rMgN5DEd",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWSQ9iAaZvQvLHytgygVxo2GNXY6tXvPLtD7GSEqG6Vqya",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWMfFW7tswrVhhWC89MkgZQfsVGDMEazSp7YTeu2Hh8n8y",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWAGUEc5QWMjqvLYVsT5Rh7LgXvUcLc6xgyfkSuYMoEBdb"
+  ]
+}
