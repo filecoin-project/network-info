@@ -50,7 +50,7 @@ import AccordionTab from '@/components/Shared/AccordionTab'
 import NetworkList from '@/static/network-list.json'
 import ContentData from '@/static/content.json'
 
-const getData = async (instance, store) => {
+const getData = async (store) => {
   const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
   const networks = NetworkList.networks
   const len = networks.length
@@ -74,7 +74,7 @@ export default {
   },
 
   async fetch ({ store }) {
-    await getData(this, store) // You can find this function up above the export statement
+    await getData(store) // You can find this function up above the export statement
   },
 
   data () {
@@ -141,12 +141,11 @@ export default {
   },
 
   async mounted () {
-    console.log(this.networkData)
     const now = new Date()
     const date = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
     const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
     console.log(`${date} at ${time}`)
-    await getData(this, this.$store) // You can find this function up above the export statement
+    await getData(this.$store) // You can find this function up above the export statement
   },
 
   methods: {
