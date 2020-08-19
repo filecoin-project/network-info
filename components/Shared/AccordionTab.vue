@@ -38,12 +38,12 @@
 
             <div class="label" v-html="highlight(labels.hasOwnProperty(key) ? labels[key] : key)"></div>
 
-            <!-- ///////////////////////////////////////////////////// Strings -->
+            <!-- /////////////////////////////////////////////////// Strings -->
             <template v-if="properties[key].type === 'string'">
               <div class="value" v-html="highlight(data[key])"></div>
             </template>
 
-            <!-- ////////////////////////////////////////////////////// Arrays -->
+            <!-- //////////////////////////////////////////////////// Arrays -->
             <template v-else-if="properties[key].type === 'array'">
               <div
                 v-for="(arrayItem, arrayItemIndex) in data[key]"
@@ -67,7 +67,7 @@
               </div>
             </template>
 
-            <!-- ///////////////////////////////////////////////////// Objects -->
+            <!-- /////////////////////////////////////////////////// Objects -->
             <template v-else-if="properties[key].type === 'object'">
               <template v-for="(objectItem, objectItemKey) in data[key]">
                 <div
@@ -85,6 +85,11 @@
                       class="link value"
                       v-html="highlight(objectItem)">
                     </a>
+                    <div
+                      v-else-if="properties[key].properties.hasOwnProperty('ConsensusMinerMinPower')"
+                      class="value"
+                      v-html="formatFilesize(objectItem)">
+                    </div>
                     <div v-else class="value" v-html="highlight(objectItem)"></div>
                   </template>
 
