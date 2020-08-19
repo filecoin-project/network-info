@@ -1,7 +1,7 @@
 <template>
   <div class="container" role="main">
 
-    <section v-if="calibrationData" class="accordion">
+    <section v-if="networks && networkSchema" class="accordion">
       <div class="grid-center">
         <div class="col-8_md-10_sm-12">
           <div class="inner-content">
@@ -22,12 +22,13 @@
             </div>
 
             <AccordionTab
-              v-if="calibrationData"
-              :data="calibrationData"
+              v-for="network in networks"
+              :key="network.key"
+              :data="network.data"
               :active="active"
               :force-active="forceActive"
               :filter-value="filterValue"
-              tag="calibration"
+              :tag="network.key"
               @toggleAccordion="toggleAccordion" />
 
           </div>
@@ -46,14 +47,21 @@ import Api from '@/api'
 import FilterBar from '@/components/Shared/FilterBar'
 import AccordionTab from '@/components/Shared/AccordionTab'
 
+import NetworkList from '@/static/network-list.json'
 import ContentData from '@/static/content.json'
 
-const getData = async (store) => {
+const getData = async (instance, store) => {
   const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
-  const calibrationData = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/calibration.json')
+  const networks = NetworkList.networks
+  const len = networks.length
+  for (let i = 0; i < len; i++) {
+    const network = networks[i]
+    const key = network.name
+    const data = await Api.getData(`https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/${key}.json`)
+    await store.dispatch('global/setNetworkData', { key, data })
+  }
   await store.dispatch('global/setNetworkSchema', networkSchema)
-  await store.dispatch('global/setCalibrationData', calibrationData)
-  await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation) is still being loaded statically! (line 49 above)
+  await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
 }
 
 // ====================================================================== Export
@@ -66,7 +74,7 @@ export default {
   },
 
   async fetch ({ store }) {
-    await getData(store) // You can find this function up above the export statement
+    await getData(this, store) // You can find this function up above the export statement
   },
 
   data () {
@@ -81,7 +89,8 @@ export default {
   computed: {
     ...mapGetters({
       contentData: 'global/contentData',
-      calibrationData: 'global/calibrationData'
+      networkSchema: 'global/networkSchema',
+      networkData: 'global/networkData'
     }),
     seo () {
       return this.contentData.seo
@@ -112,6 +121,11 @@ export default {
     },
     ogImage () {
       return this.og.image
+    },
+    networks () {
+      const networks = this.networkData
+      if (networks.length > 0) { return networks }
+      return false
     }
   },
 
@@ -127,11 +141,12 @@ export default {
   },
 
   async mounted () {
+    console.log(this.networkData)
     const now = new Date()
     const date = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
     const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
     console.log(`${date} at ${time}`)
-    await getData(this.$store) // You can find this function up above the export statement
+    await getData(this, this.$store) // You can find this function up above the export statement
   },
 
   methods: {
