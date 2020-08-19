@@ -1,0 +1,12 @@
+{
+  "networks": [
+    {
+      "name": "calibration",
+      "purpose": "For miners to prepare for the Space Race (recommended for most miners)"
+    },
+    {
+      "name":"nerpa",
+      "purpose":"For developers building apps, with small sector sizes and reduced proofs parameters. Sealing time is ~15-20 minutes. (recommended for most developers)"
+    }
+  ]
+}
