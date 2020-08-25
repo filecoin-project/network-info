@@ -54,12 +54,14 @@ const getData = async (store) => {
   const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
   const networks = NetworkList.networks
   const len = networks.length
+  
   for (let i = 0; i < len; i++) {
     const network = networks[i]
     const key = network.name
     const data = await Api.getData(`https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/${key}.json`)
     await store.dispatch('global/setNetworkData', { key, data })
   }
+
   await store.dispatch('global/setNetworkSchema', networkSchema)
   await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
 }
