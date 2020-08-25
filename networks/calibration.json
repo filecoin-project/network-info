@@ -46,22 +46,22 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"4c5e961439f75dcb8ddda53174514d333c8c9751",
+    "Commit":"a60c6e0bc2c25a4937d80acb8f05a1aa143af742",
     "Branch":"ntwk-calibration",
-    "Tag":"ntwk-calibration-8.13.1"
+    "Tag":"ntwk-calibration-8.19.0"
   },
   "Genesis":{
     "Car": {
-        "/": "Qmb4csnFbQuwCRqJ9K451QbJF5w4MQEonrEv8G1Z2tdVwx"
+        "/": "QmQgDTkhW6jb3AvwYb9CJqnMoY5D5uectd32uMaXfiEHKE"
     },
-    "Timestamp":"2020-08-13T16:37:00Z",
-    "BlockZeroCid":"bafy2bzacecsqfdw3u4zdozozkazl34sgumukkiz7tlbnkes5m7vhcorl77txs",
-    "Sha1Digest":"54864060c5999f93390a8cca4094a253b654da89"
+    "Timestamp":"2020-08-19T22:42:00Z",
+    "BlockZeroCid":"bafy2bzacedhmuctpj5okos53htiqpaqofh7xml2qu4vrqxho6dbwxsyiwtnoa",
+    "Sha1Digest":"641b0ed7393129d94ff10e167efd3557a1ae4a20"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWDHzHtmsH9BMf9is7hCzJnd1jtVb5rdeAmfm9CCoZFqeY",
-    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWHyTNdCjTviTCMpFiyYVb3TamxuLmM3wEcrhH5T4M9Q3J",
-    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWBM8Zdq288tyYF5yT1j2ym9ynApddGJFjYnXNiFiCbdXp",
-    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWKoegjZRfgY8Zp6QMqr4UtuJHzTKeWVmrniFNXeikzvGT"
+    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWJp5XRGofYpbjCNKjbidu7FsmkwyE2dwuBLhuqbPmz8GQ",
+    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWHc9dKUtqHnQvxMuEax7VdHRfrEpFcQUr6TqaCqM4VmRP",
+    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWQJsMqzAA5CYtnGmKtXQxN23w2CnGghRMFkvs2hsRWTPY",
+    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWSBynw6HJVsYqnn43weCUSZ3qtmjdyaeRdybBzE1pzN4E"
   ]
 }

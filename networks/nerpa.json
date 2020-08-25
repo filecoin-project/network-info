@@ -36,6 +36,10 @@
       "Link":"https://faucet.nerpa.interplanetary.dev/"
     },
     {
+      "Name":"Stats Dashboard",
+      "Link":"https://stats.nerpa.interplanetary.dev/"
+    },
+    {
       "Name":"Github",
       "Link": "https://github.com/filecoin-project/lotus"
     }
