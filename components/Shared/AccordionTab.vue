@@ -143,10 +143,12 @@ const setHeight = (instance, val) => {
   const panelMainHeight = instance.$refs.panelMain.clientHeight
   const panelDataHeight = instance.$refs.panelData.clientHeight
   if (val === 'resize') {
-    if (instance.active !== '' || instance.forceActive) {
-      instance.height = panelMainHeight + panelDataHeight + 'px'
-    } else {
-      instance.height = panelMainHeight + 'px'
+    if (instance.selected) {
+      if (instance.active !== '' || instance.forceActive) {
+        instance.height = panelMainHeight + panelDataHeight + 'px'
+      } else {
+        instance.height = panelMainHeight + 'px'
+      }
     }
   } else if ((typeof val === 'string' && val !== '' && val === instance.tag) || (typeof val === 'boolean' && val)) {
     instance.height = panelMainHeight + panelDataHeight + 'px'
