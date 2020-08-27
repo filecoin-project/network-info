@@ -36,6 +36,16 @@
       </div>
     </section>
 
+    <section v-else>
+      <div class="grid-center">
+        <div class="col-6_md-8_sm-12">
+          <div class="placeholder">
+            No network information is currently available, check back again soon.
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
@@ -60,12 +70,19 @@ const importAll = (req, next) => {
 }
 
 /*
-  Grab the Network Schema (xhr), ContentData (local), and network data (xhr)
+  Grab the Network Schema (xhr) and ContentData (local)
+*/
+const getBaseData = async (store) => {
+  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
+  await store.dispatch('global/setNetworkSchema', networkSchema)
+  await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
+}
+
+/*
+  Grab the network data (xhr)
 */
 const getData = async (store, networks) => {
-  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
   const len = networks.length
-
   for (let i = 0; i < len; i++) {
     const network = networks[i]
     const filename = network.split('./')[1]
@@ -75,9 +92,6 @@ const getData = async (store, networks) => {
       await store.dispatch('global/setNetworkData', { key, data })
     }
   }
-
-  await store.dispatch('global/setNetworkSchema', networkSchema)
-  await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
 }
 
 // ====================================================================== Export
@@ -90,6 +104,7 @@ export default {
   },
 
   async fetch ({ store, req }) {
+    await getBaseData(store)
     await importAll(require.context('../networks/', true, /\.json$/), async (networks) => {
       if (networks) {
         await getData(store, networks) // You can find this function up above the export statement
@@ -238,6 +253,15 @@ export default {
   flex-direction: column;
 }
 
+.placeholder {
+  @include shadow6;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+}
+
+// ///////////////////////////////////////////////////////////////////// Toolbar
 .toolbar {
   display: flex;
   flex-direction: row;
@@ -246,6 +270,7 @@ export default {
   margin-bottom: 1.75rem;
 }
 
+// //////////////////////////////////////////////////////// Expand Toggle Button
 .expand-toggle-button {
   text-transform: lowercase;
   font-weight: 400;
@@ -259,6 +284,7 @@ export default {
   }
 }
 
+// /////////////////////////////////////////////////////////////////// Accordion
 .accordion {
   margin-top: 3rem;
   padding-bottom: 1rem;
