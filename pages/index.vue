@@ -36,6 +36,16 @@
       </div>
     </section>
 
+    <section v-else>
+      <div class="grid-center">
+        <div class="col-6_md-8_sm-12">
+          <div class="placeholder">
+            No network information is currently available, check back again soon.
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
@@ -47,25 +57,41 @@ import Api from '@/api'
 import FilterBar from '@/components/Shared/FilterBar'
 import AccordionTab from '@/components/Shared/AccordionTab'
 
-import NetworkList from '@/static/network-list.json'
 import ContentData from '@/static/content.json'
 
-const getData = async (store) => {
-  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
-  const networks = NetworkList.networks
-  const len = networks.length
+/*
+  - If no JSON files found in @/networks, return false
+  - Otherwise, return an array of paths, ex: ['./network1.json', './network2.json']
+*/
+const importAll = (req, next) => {
+  const files = req.keys()
+  if (files.length > 0) { return next(req.keys()) }
+  return next(false)
+}
 
+/*
+  Grab the Network Schema (xhr) and ContentData (local)
+*/
+const getBaseData = async (store) => {
+  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
+  await store.dispatch('global/setNetworkSchema', networkSchema)
+  await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
+}
+
+/*
+  Grab the network data (xhr)
+*/
+const getData = async (store, networks) => {
+  const len = networks.length
   for (let i = 0; i < len; i++) {
     const network = networks[i]
-    const key = network.name
-    const data = await Api.getData(`https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/${key}.json`)
+    const filename = network.split('./')[1]
+    const key = filename.split('.')[0]
+    const data = await Api.getData(`https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/${filename}`)
     if (!data.hasOwnProperty('error')) {
       await store.dispatch('global/setNetworkData', { key, data })
     }
   }
-
-  await store.dispatch('global/setNetworkSchema', networkSchema)
-  await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
 }
 
 // ====================================================================== Export
@@ -77,8 +103,13 @@ export default {
     AccordionTab
   },
 
-  async fetch ({ store }) {
-    await getData(store) // You can find this function up above the export statement
+  async fetch ({ store, req }) {
+    await getBaseData(store)
+    await importAll(require.context('../networks/', true, /\.json$/), async (networks) => {
+      if (networks) {
+        await getData(store, networks) // You can find this function up above the export statement
+      }
+    })
   },
 
   data () {
@@ -144,12 +175,11 @@ export default {
     }
   },
 
-  async mounted () {
+  mounted () {
     const now = new Date()
     const date = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
     const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
     console.log(`${date} at ${time}`)
-    await getData(this.$store) // You can find this function up above the export statement
   },
 
   methods: {
@@ -223,6 +253,15 @@ export default {
   flex-direction: column;
 }
 
+.placeholder {
+  @include shadow6;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+}
+
+// ///////////////////////////////////////////////////////////////////// Toolbar
 .toolbar {
   display: flex;
   flex-direction: row;
@@ -231,6 +270,7 @@ export default {
   margin-bottom: 1.75rem;
 }
 
+// //////////////////////////////////////////////////////// Expand Toggle Button
 .expand-toggle-button {
   text-transform: lowercase;
   font-weight: 400;
@@ -244,6 +284,7 @@ export default {
   }
 }
 
+// /////////////////////////////////////////////////////////////////// Accordion
 .accordion {
   margin-top: 3rem;
   padding-bottom: 1rem;
