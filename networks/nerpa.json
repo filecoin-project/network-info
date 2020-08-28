@@ -47,7 +47,8 @@
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
     "Commit":"9d8af87ecf08b8a7d89b9721910e1ce2d498a96f",
-    "Branch":"ntwk-nerpa"
+    "Branch":"ntwk-nerpa",
+    "Tag":"ntwk-nerpa-8.28.0"
   },
   "Genesis":{
     "Car": {
