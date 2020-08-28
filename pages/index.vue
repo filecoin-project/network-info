@@ -94,6 +94,21 @@ const getData = async (store, networks) => {
   }
 }
 
+/*
+  If URL contains network tag as a hash (ex: /#network) and the network is live,
+  toggle the network open on component mount
+*/
+const toggleAccordionIfRouteMatches = (instance) => {
+  const hash = instance.$route.hash.split('#')[1]
+  const networks = instance.networks
+  if (networks) {
+    const match = networks.find(network => network.key === hash)
+    if (match) {
+      instance.toggleAccordion(hash)
+    }
+  }
+}
+
 // ====================================================================== Export
 export default {
   name: 'Index',
@@ -176,10 +191,9 @@ export default {
   },
 
   mounted () {
-    const now = new Date()
-    const date = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
-    const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
-    console.log(`${date} at ${time}`)
+    this.$nextTick(() => {
+      toggleAccordionIfRouteMatches(this)
+    })
   },
 
   methods: {
