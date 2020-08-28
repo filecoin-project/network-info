@@ -41,7 +41,7 @@
     },
     {
       "Name":"Github",
-      "Link": "https://github.com/filecoin-project/lotus"
+      "Link": "https://github.com/filecoin-project/lotus/tree/ntwk-nerpa"
     }
   ],
   "Git":{
@@ -51,11 +51,11 @@
   },
   "Genesis":{
     "Car": {
-        "/": ""
+        "/": "QmT4p2CeYKASHf4ouGfLT4rjWGtMWrsytKgW43a6Y2DW3R"
     },
-    "Timestamp":"",
+    "Timestamp":"2020-08-28T19:24:00Z",
     "BlockZeroCid":"bafy2bzacebe4qhb7yrh3sr7fs4iz5lm6brodv5uks757sbsjqxc5ict45rsu6",
-    "Sha1Digest":""
+    "Sha1Digest":"8c2bdcd9fc8b54a367b1a11ff2204d59f1565ee2"
   },
   "BootstrapPeers":[
     "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWGabqJyhJEmqy4oKb5JD5KGXvuFZd5BuDUFc6xtroYAkN",
