@@ -9,7 +9,7 @@
       <div
         ref="panelMain"
         class="panel-main"
-        @click="$emit('toggleAccordion', tag)">
+        @click="$emit('updateRoute', 'accordion-click', tag)">
         <div class="caret"></div>
         <div class="metadata">
           <div class="name">
@@ -150,7 +150,7 @@ const setHeight = (instance, val) => {
         instance.height = panelMainHeight + 'px'
       }
     }
-  } else if ((typeof val === 'string' && val !== '' && val === instance.tag) || (typeof val === 'boolean' && val)) {
+  } else if ((typeof val === 'string' && val !== '' && instance.selected) || (typeof val === 'boolean' && val)) {
     instance.height = panelMainHeight + panelDataHeight + 'px'
   } else {
     instance.height = panelMainHeight + 'px'
