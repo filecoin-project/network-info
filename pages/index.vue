@@ -51,7 +51,7 @@
 
 <script>
 // ===================================================================== Imports
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Api from '@/api'
 
 import FilterBar from '@/components/Shared/FilterBar'
@@ -96,14 +96,20 @@ const getData = async (store, networks) => {
 
 /*
   If URL contains network tag as a hash (ex: /#network) and the network is live,
-  toggle the network open on component mount
+  move the relevant network to the top of the list andtoggle the network open on
+  component mount
 */
 const toggleAccordionIfRouteMatches = (instance) => {
   const hash = instance.$route.hash.split('#')[1]
   const networks = instance.networks
   if (networks) {
-    const match = networks.find(network => network.key === hash)
-    if (match) {
+    // const match = networks.find(network => network.key === hash)
+    const index = networks.findIndex(network => network.key === hash)
+    if (index !== -1) {
+      instance.moveNetworkToIndex({
+        fromIndex: index,
+        toIndex: 0
+      })
       instance.toggleAccordion(hash)
     }
   }
@@ -197,6 +203,9 @@ export default {
   },
 
   methods: {
+    ...mapActions({
+      moveNetworkToIndex: 'global/moveNetworkToIndex'
+    }),
     setFilterValue (value) {
       this.filterValue = value
     },
