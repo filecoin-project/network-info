@@ -11,11 +11,11 @@
               <FilterBar
                 :filter-value="filterValue"
                 @setFilterValue="setFilterValue"
-                @filterBarFocused="filterBarFocused" />
+                @filterBarFocused="updateRoute('filter-bar-focused')" />
 
               <button
                 class="expand-toggle-button"
-                @click="expandToggle">
+                @click="updateRoute('expand-toggle', false)">
                 {{ expandToggleText }}
               </button>
 
@@ -29,7 +29,7 @@
               :force-active="forceActive"
               :filter-value="filterValue"
               :tag="network.key"
-              @toggleAccordion="toggleAccordion" />
+              @updateRoute="updateRoute" />
 
           </div>
         </div>
@@ -99,18 +99,22 @@ const getData = async (store, networks) => {
   move the relevant network to the top of the list andtoggle the network open on
   component mount
 */
-const toggleAccordionIfRouteMatches = (instance) => {
-  const hash = instance.$route.hash.split('#')[1]
+const toggleAccordionIfRouteMatches = (action, instance) => {
+  const tag = instance.$route.hash.split('#')[1]
   const networks = instance.networks
   if (networks) {
-    // const match = networks.find(network => network.key === hash)
-    const index = networks.findIndex(network => network.key === hash)
+    const index = networks.findIndex(network => network.key === tag)
     if (index !== -1) {
       instance.moveNetworkToIndex({
         fromIndex: index,
         toIndex: 0
       })
-      instance.toggleAccordion(hash)
+      instance.toggleAccordion(tag)
+      instance.expandToggleText = 'Collapse All'
+    } else {
+      if (instance.routeAction !== 'filter-bar-focused') {
+        instance.expandToggle('close-all')
+      }
     }
   }
 }
@@ -186,19 +190,14 @@ export default {
   },
 
   watch: {
-    active (val) {
-      if (val !== '') {
-        this.expandToggleText = 'Collapse All'
-      } else {
-        this.expandToggleText = 'Expand All'
-        this.forceActive = false
-      }
+    '$route' (val) {
+      toggleAccordionIfRouteMatches('detect-route-change', this)
     }
   },
 
   mounted () {
     this.$nextTick(() => {
-      toggleAccordionIfRouteMatches(this)
+      toggleAccordionIfRouteMatches('mounted', this)
     })
   },
 
@@ -209,33 +208,34 @@ export default {
     setFilterValue (value) {
       this.filterValue = value
     },
-    filterBarFocused () {
-      this.expandToggleText = 'Collapse All'
-      this.forceActive = true
-    },
-    toggleAccordion (tag) {
-      if (this.forceActive) {
-        this.forceActive = false
-      } else if (this.active === '') {
-        this.active = tag
-      } else if (this.active === tag) {
-        this.active = ''
-      } else {
-        this.active = tag
+    updateRoute (action, tag) {
+      this.routeAction = action
+      this.$router.push({ path: '/', ...tag && { hash: `#${tag}` } })
+      if (action === 'expand-toggle') {
+        this.expandToggle()
+      } else if (action === 'filter-bar-focused') {
+        this.expandToggle('filter-bar-focused')
+      } else if (tag === this.active) {
+        this.$router.push({ path: '/', hash: false })
       }
     },
-    expandToggle () {
+    toggleAccordion (tag) {
+      this.forceActive = false
+      this.expandToggleText = 'Collapse All'
+      const timeout = setTimeout(() => {
+        this.active = tag
+        clearTimeout(timeout)
+      }, 10)
+    },
+    expandToggle (action) {
       const toggle = this.forceActive
-      if (toggle) {
-        this.expandToggleText = 'Expand All'
-        this.forceActive = false
-        this.active = ''
-      } else if (this.active !== '') {
-        this.expandToggleText = 'Expand All'
-        this.active = ''
-      } else {
+      this.active = ''
+      if (action === 'open-all' || action === 'filter-bar-focused' || (action !== 'close-all' && !toggle)) {
         this.expandToggleText = 'Collapse All'
         this.forceActive = true
+      } else {
+        this.expandToggleText = 'Expand All'
+        this.forceActive = false
       }
     }
   },
