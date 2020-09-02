@@ -1,8 +1,8 @@
 {
   "Name":"nerpa",
-  "Purpose":"For developers building apps, with small sector sizes and reduced proofs parameters. Sealing time is ~15-20 minutes. (recommended for most developers)",
+  "Purpose":"For app developers looking to do small-scale testing. Has small sector sizes and reduced proofs parameters, so sealing takes ~15-20 minutes.",
   "Maintainer": "Digital Mob",
-  "Stability": "moderate",
+  "Stability": "low",
   "Status": "online",
   "NetworkParameters":{
     "SupportedProofTypes":[

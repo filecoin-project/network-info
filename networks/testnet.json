@@ -1,6 +1,6 @@
 {
   "Name":"testnet",
-  "Purpose":"Evaluate Filecoin at a meaningful scale",
+  "Purpose": "For app developers looking to deploy their applications and receive real-time support + miners participating in Space Race. (recommended for most developers and miners)",
   "Maintainer": "Protocol Labs",
   "Stability": "high",
   "Status": "online",
