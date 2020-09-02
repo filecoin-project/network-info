@@ -9,7 +9,7 @@
       <div
         ref="panelMain"
         class="panel-main"
-        @click="$emit('toggleAccordion', tag)">
+        @click="$emit('updateRoute', 'accordion-click', tag)">
         <div class="caret"></div>
         <div class="metadata">
           <div class="name">
@@ -140,27 +140,22 @@ const check = (instance, key) => {
 }
 
 const setHeight = (instance, val) => {
-  const panelMainHeight = instance.$refs.panelMain.clientHeight
-  const panelDataHeight = instance.$refs.panelData.clientHeight
+  const panelMainHeight = instance.panelMainHeight
+  const panelDataHeight = instance.panelDataHeight
   if (val === 'resize') {
-    if (instance.active !== '' || instance.forceActive) {
-      instance.height = panelMainHeight + panelDataHeight + 'px'
-    } else {
-      instance.height = panelMainHeight + 'px'
+    if (instance.selected) {
+      if (instance.active !== '' || instance.forceActive) {
+        instance.height = panelMainHeight + panelDataHeight + 'px'
+      } else {
+        instance.height = panelMainHeight + 'px'
+      }
     }
-  } else if ((typeof val === 'string' && val !== '' && val === instance.tag) || (typeof val === 'boolean' && val)) {
+  } else if ((typeof val === 'string' && val !== '' && instance.selected) || (typeof val === 'boolean' && val)) {
     instance.height = panelMainHeight + panelDataHeight + 'px'
   } else {
     instance.height = panelMainHeight + 'px'
   }
 }
-
-// const compileMatchList = (instance) => {
-//   const data = instance.data
-//   Object.keys(data).map((key) => {
-//     if (data)
-//   })
-// }
 
 // ====================================================================== Export
 export default {
@@ -213,7 +208,9 @@ export default {
         BootstrapPeers: 'Bootstrap Peers'
       },
       resize: false,
-      matchList: []
+      matchList: [],
+      panelMainHeight: 0,
+      panelDataHeight: 0
     }
   },
 
@@ -247,11 +244,14 @@ export default {
   mounted () {
     this.properties = this.networkSchema.properties
     if (this.$refs.section) {
-      this.height = this.$refs.panelMain.clientHeight + 'px'
-      // compileMatchList(this)
-      const resizeHandler = () => { setHeight(this, 'resize') }
-      this.resize = this.$throttle(resizeHandler, 100)
-      window.addEventListener('resize', this.resize)
+      this.$nextTick(() => {
+        this.height = this.$refs.panelMain.clientHeight + 'px'
+        this.panelMainHeight = this.$refs.panelMain.clientHeight
+        this.panelDataHeight = this.$refs.panelData.clientHeight
+        const resizeHandler = () => { setHeight(this, 'resize') }
+        this.resize = this.$throttle(resizeHandler, 100)
+        window.addEventListener('resize', this.resize)
+      })
     }
   },
 

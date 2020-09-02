@@ -22,7 +22,7 @@
         "RegisteredSealProof": 4
       }
     ],
-    "ConsensusMinerMinPower": "1073741824",
+    "ConsensusMinerMinPower": "4294967296",
     "EpochDurationSeconds": 30,
     "ExpectedLeaderPerEpoch": 5,
     "WPoStProvingPeriod": 2880,
@@ -41,27 +41,27 @@
     },
     {
       "Name":"Github",
-      "Link": "https://github.com/filecoin-project/lotus"
+      "Link": "https://github.com/filecoin-project/lotus/tree/ntwk-nerpa"
     }
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"53c75940400d2add17ec871eb4e002643ebd1e4e",
+    "Commit":"9d8af87ecf08b8a7d89b9721910e1ce2d498a96f",
     "Branch":"ntwk-nerpa",
-    "Tag":"ntwk-nerpa-8.17.0"
+    "Tag":"ntwk-nerpa-8.28.0"
   },
   "Genesis":{
     "Car": {
-        "/": "QmQwy17UdjYUCytVvnoK4mCTPHTzm7HJA5zeaDP5EqFZd8"
+        "/": "QmT4p2CeYKASHf4ouGfLT4rjWGtMWrsytKgW43a6Y2DW3R"
     },
-    "Timestamp":"2020-08-17T07:46:00Z",
-    "BlockZeroCid":"bafy2bzaceazheovo4wqiw5kc2m3eh22ze7zf4hpmjgezleeiph6jounmuam72",
-    "Sha1Digest":"99c1416f706f9384a9e3b4bfef5474f00c9185db"
+    "Timestamp":"2020-08-28T19:24:00Z",
+    "BlockZeroCid":"bafy2bzacebe4qhb7yrh3sr7fs4iz5lm6brodv5uks757sbsjqxc5ict45rsu6",
+    "Sha1Digest":"8c2bdcd9fc8b54a367b1a11ff2204d59f1565ee2"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWECgvrrRRHpSGmrdLmi8m2JFm7FUvvfcrQxL1rMgN5DEd",
-    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWSQ9iAaZvQvLHytgygVxo2GNXY6tXvPLtD7GSEqG6Vqya",
-    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWMfFW7tswrVhhWC89MkgZQfsVGDMEazSp7YTeu2Hh8n8y",
-    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWAGUEc5QWMjqvLYVsT5Rh7LgXvUcLc6xgyfkSuYMoEBdb"
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWGabqJyhJEmqy4oKb5JD5KGXvuFZd5BuDUFc6xtroYAkN",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWHdaQaxghNaDLhgHAvj2PbZf2CGXBCGLx56rsByLPZRAn",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWE3mRxmtXzhL4u4b1XbXjR3zQAvGkdwiXf2BVCF9ZN9sR",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWKmPjBYhWjKRv8rCQR7yhQYFifYg4axXbFQud1htPiAgh"
   ]
 }

@@ -25,6 +25,9 @@ export const actions = {
     if (!exists) {
       commit('SET_NETWORK_DATA', data)
     }
+  },
+  moveNetworkToIndex ({ commit }, payload) {
+    commit('MOVE_NETWORK_TO_INDEX', payload)
   }
 }
 
@@ -37,5 +40,8 @@ export const mutations = {
   },
   SET_NETWORK_DATA (state, data) {
     state.networkData.push(data)
+  },
+  MOVE_NETWORK_TO_INDEX (state, payload) {
+    state.networkData.splice(payload.toIndex, 0, state.networkData.splice(payload.fromIndex, 1)[0])
   }
 }
