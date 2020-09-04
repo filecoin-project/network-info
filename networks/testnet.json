@@ -41,9 +41,9 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"98a9736abc391dc7dea0ece65038f7eb2d2d2dec",
+    "Commit":"38cb2601d702dffa502077d08a07864443b98009",
     "Branch":"master",
-    "Tag":"v0.5.1"
+    "Tag":"v0.5.10"
   },
   "Genesis":{
     "Car": {
