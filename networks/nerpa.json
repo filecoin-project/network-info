@@ -41,14 +41,14 @@
     },
     {
       "Name":"Github",
-      "Link": "https://github.com/filecoin-project/lotus/tree/feat/well-targetted-nerpa-v0.7.x"
+      "Link": "https://github.com/filecoin-project/lotus/tree/ntwk-nerpa"
     }
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"9f12eace4b716dd26ab62bbe0c2c473d75a125e0",
-    "Branch":"feat/well-targetted-nerpa-v0.7.x",
-    "Tag":""
+    "Commit":"992073d263fbb8edf5f3043c3fcf76095b472c5b",
+    "Branch":"ntwk-nerpa",
+    "Tag":"ntwk-nerpa-9.15.0"
   },
   "Genesis":{
     "Car": {
