@@ -1,6 +1,6 @@
 {
   "Name":"nerpa",
-  "Purpose":"For app developers looking to do small-scale testing. Has small sector sizes and reduced proofs parameters, so sealing takes ~15-20 minutes.",
+  "Purpose":"For app developers looking to do small-scale testing. Has small sector sizes and reduced proofs parameters, so sealing takes ~5-10 minutes.",
   "Maintainer": "Digital Mob",
   "Stability": "low",
   "Status": "online",
@@ -41,27 +41,27 @@
     },
     {
       "Name":"Github",
-      "Link": "https://github.com/filecoin-project/lotus/tree/ntwk-nerpa"
+      "Link": "https://github.com/filecoin-project/lotus/tree/feat/well-targetted-nerpa-v0.7.x"
     }
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"9d8af87ecf08b8a7d89b9721910e1ce2d498a96f",
-    "Branch":"ntwk-nerpa",
-    "Tag":"ntwk-nerpa-8.28.0"
+    "Commit":"9f12eace4b716dd26ab62bbe0c2c473d75a125e0",
+    "Branch":"feat/well-targetted-nerpa-v0.7.x",
+    "Tag":""
   },
   "Genesis":{
     "Car": {
-        "/": "QmT4p2CeYKASHf4ouGfLT4rjWGtMWrsytKgW43a6Y2DW3R"
+        "/": "QmQGyY3xZMFiVcj2zhiG2rcPBPP87PknJqKtd3B8x8ykrY"
     },
-    "Timestamp":"2020-08-28T19:24:00Z",
-    "BlockZeroCid":"bafy2bzacebe4qhb7yrh3sr7fs4iz5lm6brodv5uks757sbsjqxc5ict45rsu6",
-    "Sha1Digest":"8c2bdcd9fc8b54a367b1a11ff2204d59f1565ee2"
+    "Timestamp":"2020-09-15T09:53:00Z",
+    "BlockZeroCid":"bafy2bzacebwdaxlj2fwntbuk4f74ijvdi4tdujrjyznu7zqjtjy4dkshclxce",
+    "Sha1Digest":"9f0a5820a70ce90999667af534d1d9f5478adce0"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWGabqJyhJEmqy4oKb5JD5KGXvuFZd5BuDUFc6xtroYAkN",
-    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWHdaQaxghNaDLhgHAvj2PbZf2CGXBCGLx56rsByLPZRAn",
-    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWE3mRxmtXzhL4u4b1XbXjR3zQAvGkdwiXf2BVCF9ZN9sR",
-    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWKmPjBYhWjKRv8rCQR7yhQYFifYg4axXbFQud1htPiAgh"
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWH18xUp3ywhrxdt1NKPKdKJN9PUUoWVvghf7SHig7tabB",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWPPYqe8dNkcvqDbdFUZkq6FAgjUYgZ5UCb8JEXVpvYpeW",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWANTw75WxNzbM699kNPSjoV7P9T82nX5Mk9cb2Phxx7U1",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWBxkzgLoqiXrNaCcHf3NW3LCrQfwp41GVK288cric8MvC"
   ]
 }
