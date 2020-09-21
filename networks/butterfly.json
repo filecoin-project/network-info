@@ -1,6 +1,6 @@
 {
   "Name":"butterfly",
-  "Purpose": "For core implementers testing new code. (frequent resets and not recommended for most users) 512MiB, 32GiB, 64GiB Low",
+  "Purpose": "For core implementers testing new code. (frequent resets and not recommended for most users) 512MiB, 32GiB, 64GiB",
   "Maintainer": "Protocol Labs",
   "Stability": "low",
   "Status": "online",
@@ -46,20 +46,20 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"5fc77ce7da9995590f608b059ed84a34577e8e91",
+    "Commit":"be4006378dd07ccfe3e224bfe0f5cfe8d1a8522f",
     "Branch":"ntwk-butterfly",
-    "Tag":"ntwk-butterfly-9.7.0"
+    "Tag":"ntwk-butterfly-9.30.0"
   },
   "Genesis":{
     "Car": {
-        "/": "QmWQNZvMp9Vg5Dxhy8uhgLpqs63zLtx8mzzufZmqGgwvnu"
+        "/": "QmNy8Sbqt99XH6hxEmWrFyzQNqR1Jke968QkDWUtK4HBBk"
     },
-    "Timestamp":"2020-09-07T04:49:00Z",
-    "BlockZeroCid":"bafy2bzacedwqaxtlua6ztz3kalpi5wv3nmsal5ikutdmdqdkey5kc2g74nchs",
-    "Sha1Digest":"5fc77ce7da9995590f608b059ed84a34577e8e91"
+    "Timestamp":"2020-09-30T00:02:00Z",
+    "BlockZeroCid":"bafy2bzacebeex5vf3pcbeqfaswppyly3sxtckzvohetdicleya5il7gqc2uby",
+    "Sha1Digest":"6f92aa8112f65fe59a2db2e77c56168f16cf30ce"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.butterfly.fildev.network/tcp/1347/p2p/12D3KooWFhdKVWLaa65FsnmvXQYJ3ogSFnPi5i5ov2doyiV8U8uP",
-    "/dns4/bootstrap-1.butterfly.fildev.network/tcp/1347/p2p/12D3KooWKT3j9yafCjsEJBtvtGCzoAz5LcEcvX3DVzc7cyrAw1Rj"
+    "/dns4/bootstrap-0.butterfly.fildev.network/tcp/1347/p2p/12D3KooWK3WNs8LcC5bNVRmcfM6QMNV8btBxYwNhxaP1NCv4ueGw",
+    "/dns4/bootstrap-1.butterfly.fildev.network/tcp/1347/p2p/12D3KooWEq5DpaYddHQ1AyxCUamFa5y6kkWZ7mjHL5zG1jvU1GeM"
   ]
 }
