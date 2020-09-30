@@ -65,7 +65,22 @@ import ContentData from '@/static/content.json'
 */
 const importAll = (req, next) => {
   const files = req.keys()
-  if (files.length > 0) { return next(req.keys()) }
+
+  files.sort(function (a, b) {
+    if (a === b) {
+      return 0
+    }
+
+    if (a === './mainnet.json' || (a === './testnet.json' && b !== './mainnet.json')) {
+      return -1
+    }
+
+    if (b === './mainnet.json' || b === './testnet.json') {
+      return 1
+    }
+    return a.localeCompare(b)
+  })
+  if (files.length > 0) { return next(files) }
   return next(false)
 }
 
@@ -73,7 +88,7 @@ const importAll = (req, next) => {
   Grab the Network Schema (xhr) and ContentData (local)
 */
 const getBaseData = async (store) => {
-  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/schemas/network.json')
+  const networkSchema = await Api.getData('http://127.0.0.1:5000/schemas/network.json')
   await store.dispatch('global/setNetworkSchema', networkSchema)
   await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
 }
@@ -87,7 +102,7 @@ const getData = async (store, networks) => {
     const network = networks[i]
     const filename = network.split('./')[1]
     const key = filename.split('.')[0]
-    const data = await Api.getData(`https://raw.githubusercontent.com/filecoin-project/network-info/master/networks/${filename}`)
+    const data = await Api.getData(`http://127.0.0.1:5000/networks/${filename}`)
     if (!data.hasOwnProperty('error')) {
       await store.dispatch('global/setNetworkData', { key, data })
     }
@@ -130,7 +145,7 @@ export default {
 
   async fetch ({ store, req }) {
     await getBaseData(store)
-    await importAll(require.context('../networks/', true, /\.json$/), async (networks) => {
+    await importAll(require.context('../static/networks/', true, /\.json$/), async (networks) => {
       if (networks) {
         await getData(store, networks) // You can find this function up above the export statement
       }

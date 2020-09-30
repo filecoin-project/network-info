@@ -1,25 +1,26 @@
 {
   "Name":"butterfly",
-  "Purpose": "For core implementers testing new code. (frequent resets and not recommended for most users) 512MiB, 32GiB, 64GiB Low",
+  "Summary": "For core implementers testing new code.",
+  "Description": "This network suffers frequent resets and is not recommended for most users",
   "Maintainer": "Protocol Labs",
   "Stability": "low",
   "Status": "online",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
-        "Name":"RegisteredSealProof_StackedDrg512MiBV1",
-        "Size":"536870912",
-        "RegisteredSealProof": 2
+	"Name":"RegisteredSealProof_StackedDrg512MiBV1",
+	"Size":"536870912",
+	"RegisteredSealProof": 2
       },
       {
-        "Name":"RegisteredSealProof_StackedDrg32GiBV1",
-        "Size":"34359738368",
-        "RegisteredSealProof": 3
+	"Name":"RegisteredSealProof_StackedDrg32GiBV1",
+	"Size":"34359738368",
+	"RegisteredSealProof": 3
       },
       {
-        "Name":"RegisteredSealProof_StackedDrg64GiBV1",
-        "Size":"68719476736",
-        "RegisteredSealProof": 4
+	"Name":"RegisteredSealProof_StackedDrg64GiBV1",
+	"Size":"68719476736",
+	"RegisteredSealProof": 4
       }
     ],
     "ConsensusMinerMinPower": "1073741824",
@@ -40,6 +41,10 @@
       "Link":"https://stats.butterfly.fildev.network/"
     },
     {
+      "Name":"Slack Channel: #fil-net-butterfly",
+      "Link":"https://filecoin.io/slack"
+    },
+    {
       "Name":"Github",
       "Link": "https://github.com/filecoin-project/lotus"
     }
@@ -52,7 +57,7 @@
   },
   "Genesis":{
     "Car": {
-        "/": "QmWQNZvMp9Vg5Dxhy8uhgLpqs63zLtx8mzzufZmqGgwvnu"
+	"/": "QmWQNZvMp9Vg5Dxhy8uhgLpqs63zLtx8mzzufZmqGgwvnu"
     },
     "Timestamp":"2020-09-07T04:49:00Z",
     "BlockZeroCid":"bafy2bzacedwqaxtlua6ztz3kalpi5wv3nmsal5ikutdmdqdkey5kc2g74nchs",
