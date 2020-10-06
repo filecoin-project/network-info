@@ -15,8 +15,8 @@
           <div class="name">
             {{ name }}
           </div>
-          <div class="purpose">
-            {{ purpose }}
+          <div class="summary">
+            {{ summary }}
           </div>
         </div>
         <div :class="['status', data.Status]">
@@ -29,7 +29,8 @@
       </div>
 
       <div ref="panelData" class="panel-data">
-
+        <div class="description" v-html="description">
+        </div>
         <template v-for="(key, index) in order">
           <div
             v-if="data.hasOwnProperty(key) && properties.hasOwnProperty(key)"
@@ -223,8 +224,11 @@ export default {
       if (name) { return this.$capitalize(name) }
       return false
     },
-    purpose () {
-      return check(this, 'Purpose')
+    summary () {
+      return check(this, 'Summary')
+    },
+    description () {
+      return check(this, 'Description')
     },
     selected () {
       if (this.active === this.tag) { return true }

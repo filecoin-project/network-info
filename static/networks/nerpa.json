@@ -1,25 +1,26 @@
 {
   "Name":"nerpa",
-  "Purpose":"For app developers looking to do small-scale testing. Has small sector sizes and reduced proofs parameters, so sealing takes ~25 minutes.",
+  "Summary":"For app developers looking to do small-scale testing. Has small sector sizes and reduced proofs parameters, so sealing takes ~25 minutes.",
+  "Description": "The Nerpa network was named after a <a href=\"https://en.wikipedia.org/wiki/Baikal_seal\">species of seal</a>, one of the smallest true seals.",
   "Maintainer": "Digital Mob",
   "Stability": "low",
   "Status": "online",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
-        "Name":"RegisteredSealProof_StackedDrg512MiBV1",
-        "Size":"536870912",
-        "RegisteredSealProof": 2
+	"Name":"RegisteredSealProof_StackedDrg512MiBV1",
+	"Size":"536870912",
+	"RegisteredSealProof": 2
       },
       {
-        "Name":"RegisteredSealProof_StackedDrg32GiBV1",
-        "Size":"34359738368",
-        "RegisteredSealProof": 3
+	"Name":"RegisteredSealProof_StackedDrg32GiBV1",
+	"Size":"34359738368",
+	"RegisteredSealProof": 3
       },
       {
-        "Name":"RegisteredSealProof_StackedDrg64GiBV1",
-        "Size":"68719476736",
-        "RegisteredSealProof": 4
+	"Name":"RegisteredSealProof_StackedDrg64GiBV1",
+	"Size":"68719476736",
+	"RegisteredSealProof": 4
       }
     ],
     "ConsensusMinerMinPower": "4294967296",
@@ -40,6 +41,10 @@
       "Link":"https://stats.nerpa.interplanetary.dev/"
     },
     {
+      "Name":"Slack Channel: #fil-net-nerpa",
+      "Link":"https://filecoin.io/slack"
+    },
+    {
       "Name":"Github",
       "Link": "https://github.com/filecoin-project/lotus/tree/ntwk-nerpa"
     }
@@ -52,7 +57,7 @@
   },
   "Genesis":{
     "Car": {
-        "/": "QmQGyY3xZMFiVcj2zhiG2rcPBPP87PknJqKtd3B8x8ykrY"
+	"/": "QmQGyY3xZMFiVcj2zhiG2rcPBPP87PknJqKtd3B8x8ykrY"
     },
     "Timestamp":"2020-09-15T09:53:00Z",
     "BlockZeroCid":"bafy2bzacebwdaxlj2fwntbuk4f74ijvdi4tdujrjyznu7zqjtjy4dkshclxce",
