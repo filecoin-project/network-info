@@ -88,7 +88,7 @@ const importAll = (req, next) => {
   Grab the Network Schema (xhr) and ContentData (local)
 */
 const getBaseData = async (store) => {
-  const networkSchema = await Api.getData('http://127.0.0.1:5000/schemas/network.json')
+  const networkSchema = await Api.getData('https://raw.githubusercontent.com/filecoin-project/network-info/master/static/schemas/network.json')
   await store.dispatch('global/setNetworkSchema', networkSchema)
   await store.dispatch('global/setContentData', ContentData) // <-- This content (eg: navigation links) is still being loaded statically! (line 50 above)
 }
@@ -102,7 +102,7 @@ const getData = async (store, networks) => {
     const network = networks[i]
     const filename = network.split('./')[1]
     const key = filename.split('.')[0]
-    const data = await Api.getData(`http://127.0.0.1:5000/networks/${filename}`)
+    const data = await Api.getData(`https://raw.githubusercontent.com/filecoin-project/network-info/master/static/networks/${filename}`)
     if (!data.hasOwnProperty('error')) {
       await store.dispatch('global/setNetworkData', { key, data })
     }
