@@ -1,0 +1,67 @@
+{
+  "Name":"calibration",
+  "Purpose":"For miners to prepare for the Space Race (recommended for most miners)",
+  "Maintainer": "Protocol Labs",
+  "Stability": "moderate",
+  "Status": "online",
+  "NetworkParameters":{
+    "SupportedProofTypes":[
+      {
+        "Name":"RegisteredSealProof_StackedDrg512MiBV1",
+        "Size":"536870912",
+        "RegisteredSealProof": 2
+      },
+      {
+        "Name":"RegisteredSealProof_StackedDrg32GiBV1",
+        "Size":"34359738368",
+        "RegisteredSealProof": 3
+      },
+      {
+        "Name":"RegisteredSealProof_StackedDrg64GiBV1",
+        "Size":"68719476736",
+        "RegisteredSealProof": 4
+      }
+    ],
+    "ConsensusMinerMinPower": "549755813888",
+    "EpochDurationSeconds": 30,
+    "ExpectedLeaderPerEpoch": 5,
+    "WPoStProvingPeriod": 2880,
+    "WPoStChallengeWindow": 60,
+    "WPoStPeriodDeadlines": 48,
+    "PreCommitChallengeDelay": 150
+  },
+  "ResourceLinks":[
+    {
+      "Name":"Faucet",
+      "Link":"https://faucet.calibration.fildev.network/"
+    },
+    {
+      "Name":"Stats Dashboard",
+      "Link":"https://stats.calibration.fildev.network/"
+    },
+    {
+      "Name":"Github",
+      "Link": "https://github.com/filecoin-project/lotus"
+    }
+  ],
+  "Git":{
+    "Base": "https://github.com/filecoin-project/lotus/tree/",
+    "Commit":"d0e432ab16c1a397079ef079b9c5856ba8ea325f",
+    "Branch":"ntwk-calibration",
+    "Tag":"ntwk-calibration-10.7.0"
+  },
+  "Genesis":{
+    "Car": {
+        "/": "QmSCXR79mQJrcy8xR176ZuzaXnRQoab8NHQfcuPPrzauBb"
+    },
+    "Timestamp":"2020-10-07T03:47:00Z",
+    "BlockZeroCid":"bafy2bzacebqzvf2qabqgkuieqkcpejw5r6mybpiivyoqoirh4kbbhc72cjqty",
+    "Sha1Digest":"4a8bb59d01377b01647cf22ccb008d108099f9f3"
+  },
+  "BootstrapPeers":[
+    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWGru4fBMc12t4rcwp9UxRAK1o8JBLdAJNL1fdYpQuu6mg",
+    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWCaXUxN1cSjfS3SYM93Tv1itnUExXkohRzct1bAtjSEJ2",
+    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWSdjKZoigrDK7Qkpbmk5Pk1X7c6M2YB8gjN4qEXW79cp7",
+    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWR21sXfgX7MEQZEwdtPL1RwRAormMiYL1zo2h7Gmg4Tit"
+  ]
+}
