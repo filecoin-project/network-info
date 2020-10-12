@@ -46,9 +46,9 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"d0e432ab16c1a397079ef079b9c5856ba8ea325f",
+    "Commit":"d1b95b02dd3bf7dfc2085380e0b260329e4d2823",
     "Branch":"ntwk-calibration",
-    "Tag":"ntwk-calibration-10.7.0"
+    "Tag":"ntwk-calibration-10.7.1"
   },
   "Genesis":{
     "Car": {
