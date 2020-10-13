@@ -1,7 +1,7 @@
 {
   "Name":"testnet",
-  "Summary": "Testnet is the primary live testing network before Mainnet launch. It is used to evaluate Filecoin at meaningful scale via testing, benchmarking, and optimizations. It is recommended for most app developers and miners.",
-  "Description": "Testnet is the most realistic simulation of the Filecoin mainnet to date:<br /><br />- Prospective storage miners can experience more realistic sealing performance and hardware requirements due to the use of near-final proofs constructions and parameters<br />  - Prospective storage clients can store and retrieve real data on the testnet. Clients can participate in deal-making workflows and storage + retrieval functionality.<br />  - As planned for mainnet, testnet supports 32 GiB and 64 GiB sectors.",
+  "Summary": "Testnet is the primary Filecoin network.",
+  "Description": "Testnet will become mainnet on block 148,888. It supports 32 GiB and 64 GiB sectors.",
   "Maintainer": "Protocol Labs",
   "Stability": "high",
   "Status": "online",
