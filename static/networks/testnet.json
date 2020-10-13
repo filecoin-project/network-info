@@ -5,7 +5,6 @@
   "Maintainer": "Protocol Labs",
   "Stability": "high",
   "Status": "online",
-  "StatusUrl": "https://filecoin.statuspage.io",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
@@ -35,6 +34,10 @@
     {
       "Name":"Latest chain snapshot (full)",
       "Link":"ttps://very-temporary-spacerace-chain-snapshot.s3-us-west-2.amazonaws.com/Spacerace_stateroots_snapshot_latest.car"
+    },
+    {
+      "Name": "Status page and incidents",
+      "Link": "https://filecoin.statuspage.io",
     },
     {
       "Name":"Faucet",
