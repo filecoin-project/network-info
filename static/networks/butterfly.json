@@ -1,6 +1,7 @@
 {
   "Name":"butterfly",
-  "Purpose": "For core implementers testing new code. (frequent resets and not recommended for most users) 512MiB, 32GiB, 64GiB",
+  "Summary": "For core implementers testing new code.",
+  "Description": "This network suffers frequent resets and is not recommended for most users.",
   "Maintainer": "Protocol Labs",
   "Stability": "low",
   "Status": "online",
