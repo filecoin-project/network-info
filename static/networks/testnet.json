@@ -5,6 +5,7 @@
   "Maintainer": "Protocol Labs",
   "Stability": "high",
   "Status": "online",
+  "StatusUrl": "https://filecoin.statuspage.io",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
