@@ -1,26 +1,26 @@
 {
   "Name":"butterfly",
   "Summary": "For core implementers testing new code.",
-  "Description": "This network suffers frequent resets and is not recommended for most users",
+  "Description": "This network suffers frequent resets and is not recommended for most users.",
   "Maintainer": "Protocol Labs",
   "Stability": "low",
   "Status": "online",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
-	"Name":"RegisteredSealProof_StackedDrg512MiBV1",
-	"Size":"536870912",
-	"RegisteredSealProof": 2
+        "Name":"RegisteredSealProof_StackedDrg512MiBV1",
+        "Size":"536870912",
+        "RegisteredSealProof": 2
       },
       {
-	"Name":"RegisteredSealProof_StackedDrg32GiBV1",
-	"Size":"34359738368",
-	"RegisteredSealProof": 3
+        "Name":"RegisteredSealProof_StackedDrg32GiBV1",
+        "Size":"34359738368",
+        "RegisteredSealProof": 3
       },
       {
-	"Name":"RegisteredSealProof_StackedDrg64GiBV1",
-	"Size":"68719476736",
-	"RegisteredSealProof": 4
+        "Name":"RegisteredSealProof_StackedDrg64GiBV1",
+        "Size":"68719476736",
+        "RegisteredSealProof": 4
       }
     ],
     "ConsensusMinerMinPower": "1073741824",
@@ -41,30 +41,26 @@
       "Link":"https://stats.butterfly.fildev.network/"
     },
     {
-      "Name":"Slack Channel: #fil-net-butterfly",
-      "Link":"https://filecoin.io/slack"
-    },
-    {
       "Name":"Github",
       "Link": "https://github.com/filecoin-project/lotus"
     }
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"be4006378dd07ccfe3e224bfe0f5cfe8d1a8522f",
+    "Commit":"321c59ee400ca0d32b6ca140cf1037330597f333",
     "Branch":"ntwk-butterfly",
-    "Tag":"ntwk-butterfly-9.30.0"
+    "Tag":"ntwk-butterfly-10.7.0"
   },
- "Genesis":{
+  "Genesis":{
     "Car": {
-	"/": "QmNy8Sbqt99XH6hxEmWrFyzQNqR1Jke968QkDWUtK4HBBk"
+        "/": "QmdD7f8ptwe33gABv51U21CGC4haNCUYpic7aQWnLLmSWV"
     },
-    "Timestamp":"2020-09-30T00:02:00Z",
-    "BlockZeroCid":"bafy2bzacebeex5vf3pcbeqfaswppyly3sxtckzvohetdicleya5il7gqc2uby",
-    "Sha1Digest":"6f92aa8112f65fe59a2db2e77c56168f16cf30ce"
+    "Timestamp":"2020-10-07T01:53:00Z",
+    "BlockZeroCid":"bafy2bzacedbiwuudfte7vq4mjxdz7wm5bx6pp5scoyjvusimeobxp7eywl7kq",
+    "Sha1Digest":"8fa7057e09b5384c9b1e9535ea43955424df7e04"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.butterfly.fildev.network/tcp/1347/p2p/12D3KooWK3WNs8LcC5bNVRmcfM6QMNV8btBxYwNhxaP1NCv4ueGw",
-    "/dns4/bootstrap-1.butterfly.fildev.network/tcp/1347/p2p/12D3KooWEq5DpaYddHQ1AyxCUamFa5y6kkWZ7mjHL5zG1jvU1GeM"
+    "/dns4/bootstrap-0.butterfly.fildev.network/tcp/1347/p2p/12D3KooWCYDmiVU7yXfg8MsuCAwuMmueCrjeaqduFA8gMFTWCUJk",
+    "/dns4/bootstrap-1.butterfly.fildev.network/tcp/1347/p2p/12D3KooWKap2ouokyEu2kF56CCBsgxx3e54TGzdzcbYhxk4DtSRr"
   ]
 }
