@@ -1,7 +1,7 @@
 {
-  "Name":"testnet",
-  "Summary": "Testnet is the primary Filecoin network.",
-  "Description": "Testnet will become mainnet on block 148,888. It supports 32 GiB and 64 GiB sectors.",
+  "Name":"mainnet",
+  "Summary": "Mainnet is the primary Filecoin network.",
+  "Description": "Mainnet began on block 148,888. It supports 32 GiB and 64 GiB sectors.",
   "Maintainer": "Protocol Labs",
   "Stability": "high",
   "Status": "online",
@@ -40,15 +40,11 @@
       "Link": "https://filecoin.statuspage.io"
     },
     {
-      "Name":"Faucet",
-      "Link":"https://spacerace.faucet.glif.io/"
-    },
-    {
       "Name":"Stats Dashboard",
-      "Link":"https://stats.testnet.filecoin.io/"
+      "Link":"https://stats.filecoin.io/"
     },
     {
-      "Name":"Slack Channel: #fil-testnet",
+      "Name":"Slack Channel: #fil-testnet-announce",
       "Link":"https://filecoin.io/slack"
     },
     {
