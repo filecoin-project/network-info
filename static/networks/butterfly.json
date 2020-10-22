@@ -4,7 +4,7 @@
   "Description": "This network suffers frequent resets and is not recommended for most users.",
   "Maintainer": "Protocol Labs",
   "Stability": "low",
-  "Status": "offline",
+  "Status": "online",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
@@ -47,20 +47,20 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"2eb42725d9b587c4e204da3e6356a6dd99626b07",
+    "Commit":"0c81ea6dca7417d5716452a9648f21d2107165fe",
     "Branch":"ntwk-butterfly",
-    "Tag":"ntwk-butterfly-10.18.0"
+    "Tag":"ntwk-butterfly-10.22.0"
   },
   "Genesis":{
     "Car": {
-        "/": "QmZH1tMwWJyAp24AjUp3bxYkhJaxE6xhUpN1inrfZr8pQw"
+        "/": "QmTAHfF4quDGLuLmSgVmsf5K8TuLCb9tK1Jhgmqt79Q9e2"
     },
-    "Timestamp":"2020-10-18T21:35:00Z",
-    "BlockZeroCid":"bafy2bzacecmj7sicvdsuxceg73fkljviwo3puzit5pxtzfem5kntralwawivy",
-    "Sha1Digest":"10bb28d94bf245b06431ec88b8d1f199e6c1124a"
+    "Timestamp":"2020-10-22T03:52:00Z",
+    "BlockZeroCid":"bafy2bzacebyzk3appazu7whgjr3qfnjiduzny4qt3eojxo53md7qjjatj7a4s",
+    "Sha1Digest":"c076e162e3de66062c99ca702f0fe42749cdc5e0"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.butterfly.fildev.network/tcp/1347/p2p/12D3KooWLyXZeuQ9PpVYxuEfXVvKBx1DaozLHoDFsg4ZHMbspMmb",
-    "/dns4/bootstrap-1.butterfly.fildev.network/tcp/1347/p2p/12D3KooWKP5M226HZWu7R3RwqFB6YoN6kLeuZwFbQWeugEmwjcgQ"
+    "/dns4/bootstrap-0.butterfly.fildev.network/tcp/1347/p2p/12D3KooWMHa7pphgSUm2FMXLPPk5UodNzzu1eULWsnBEiyRQEdpe",
+    "/dns4/bootstrap-1.butterfly.fildev.network/tcp/1347/p2p/12D3KooWE88B8e5sBgzCwfWjGAdzVY588BVKfhniuyXbRZaJSPbF"
   ]
 }
