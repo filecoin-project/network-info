@@ -4,7 +4,7 @@
   "Description": "Calibration network is the most realistic simulation of the Filecoin mainnet:<br /><br />- Prospective storage miners can experience more realistic sealing performance and hardware requirements due to the use of final proofs constructions and parameters<br />  - Prospective storage clients can store and retrieve real data on the network. Clients can participate in deal-making workflows and storage + retrieval functionality.<br />  - Same as mainnet, the calibration network supports 32 GiB and 64 GiB sectors with an additional 512MiB sector.",
   "Maintainer": "Protocol Labs",
   "Stability": "moderate",
-  "Status": "offline",
+  "Status": "online",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
