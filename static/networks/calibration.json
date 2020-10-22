@@ -23,7 +23,7 @@
         "RegisteredSealProof": 4
       }
     ],
-    "ConsensusMinerMinPower": "549755813888",
+    "ConsensusMinerMinPower": "10737418240",
     "EpochDurationSeconds": 30,
     "ExpectedLeaderPerEpoch": 5,
     "WPoStProvingPeriod": 2880,
@@ -47,22 +47,22 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"a3686ce88eb68623dd45e815347903d64a73ae4d",
+    "Commit":"b039f44a11c9f35a12f165a6772b3d593f9b1797",
     "Branch":"ntwk-calibration",
-    "Tag":"ntwk-calibration-10.12.1"
+    "Tag":"ntwk-calibration-10.22.0"
   },
   "Genesis":{
     "Car": {
-        "/": "QmaXg5JazDVB28x4nHujhzKczasEuUeKxtSQSYne6B8YB6"
+        "/": "QmScXTZmcEpcaxu3SGFEp8kzDkECXsjdxSQGPybAg6xQtU"
     },
-    "Timestamp":"2020-10-12T07:57:00Z",
-    "BlockZeroCid":"bafy2bzacea47g25ybzzu5kbnl2tzstopfljamntkspftw2lke2qrwded2scg2",
-    "Sha1Digest":"a020c60be5b653ddc41ad471930a3f862b26bff9"
+    "Timestamp":"2020-10-22T18:07:00Z",
+    "BlockZeroCid":"bafy2bzacedgmbzq66bpdjvjybvjsichndlv3mc4f4mdikycnuew2y2lvwojm6",
+    "Sha1Digest":"ac0b44079a55695111e833de81cb905f53e1b0af"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWA3bLx1ntQ2nSVXZRQnL4NEtwVdadk9TUrvZQKUGu9qnh",
-    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWR51XjrKbGFz9y1c8hKw3oguqGvQJNvxPDcPC9UXhkP6K",
-    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWKKb2C1khuxBBbk21dXe8hdEZ1FETqgB3TEVRNm5ZZxWT",
-    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWDCQH94idHfDBeoVGCkQVQL7DZp98ZvuRd33F76wJAgfd"
+    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWK1QYsm6iqyhgH7vqsbeoNoKHbT368h1JLHS1qYN36oyc",
+    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWKDyJZoPsNak1iYNN1GGmvGnvhyVbWBL6iusYfP3RpgYs",
+    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWJRSTnzABB6MYYEBbSTT52phQntVD1PpRTMh1xt9mh6yH",
+    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWQLi3kY6HnMYLUtwCe26zWMdNhniFgHVNn1DioQc7NiWv"
   ]
 }
