@@ -29,11 +29,11 @@
   "ResourceLinks":[
     {
       "Name":"Latest chain snapshot (pruned)",
-      "Link":"https://very-temporary-spacerace-chain-snapshot.s3-us-west-2.amazonaws.com/Spacerace_pruned_stateroots_snapshot_latest.car"
+      "Link":"https://fil-chain-snapshots-fallback.s3.amazonaws.com/mainnet/minimal_finality_stateroots_latest.car"
     },
     {
       "Name":"Latest chain snapshot (full)",
-      "Link":"ttps://very-temporary-spacerace-chain-snapshot.s3-us-west-2.amazonaws.com/Spacerace_stateroots_snapshot_latest.car"
+      "Link":"https://fil-chain-snapshots-fallback.s3.amazonaws.com/mainnet/complete_chain_with_finality_stateroots_latest.car"
     },
     {
       "Name": "Status page and incidents",
