@@ -41,8 +41,8 @@
       "Link":"https://stats.nerpa.interplanetary.dev/"
     },
     {
-      "Name":"Slack Channel: #fil-net-nerpa",
-      "Link":"https://filecoin.io/slack"
+      "Name":"Slack Channel: #fil-net-nerpa-announce",
+      "Link":"https://filecoinproject.slack.com/archives/C016VJSJNTH"
     },
     {
       "Name":"Github",
@@ -51,22 +51,22 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"992073d263fbb8edf5f3043c3fcf76095b472c5b",
+    "Commit":"c827897334305b36b386a3eb75c57b283e313a69",
     "Branch":"ntwk-nerpa",
-    "Tag":"ntwk-nerpa-9.15.0"
+    "Tag":"ntwk-nerpa-10.27.0"
   },
   "Genesis":{
     "Car": {
-	"/": "QmQGyY3xZMFiVcj2zhiG2rcPBPP87PknJqKtd3B8x8ykrY"
+	"/": "QmXUcMBBJiNDeAGE5YRio45RcTLiYCtgfkX6mWyhnf9E6n"
     },
-    "Timestamp":"2020-09-15T09:53:00Z",
-    "BlockZeroCid":"bafy2bzacebwdaxlj2fwntbuk4f74ijvdi4tdujrjyznu7zqjtjy4dkshclxce",
-    "Sha1Digest":"9f0a5820a70ce90999667af534d1d9f5478adce0"
+    "Timestamp":"2020-10-27T15:34:00Z",
+    "BlockZeroCid":"bafy2bzacecoqihgsli767svu5iagwwuwkpqqa24ps3wqgfwbpv4prkcees3pm",
+    "Sha1Digest":"2994f194d971cefd1bd2f64d48d03841d93e6eca"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWH18xUp3ywhrxdt1NKPKdKJN9PUUoWVvghf7SHig7tabB",
-    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWPPYqe8dNkcvqDbdFUZkq6FAgjUYgZ5UCb8JEXVpvYpeW",
-    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWANTw75WxNzbM699kNPSjoV7P9T82nX5Mk9cb2Phxx7U1",
-    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWBxkzgLoqiXrNaCcHf3NW3LCrQfwp41GVK288cric8MvC"
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWBscfpDkMHL2zCPeHARxDj9NVJTD8XUMVMs6gzZhjt8RS",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWKvPTUjuxbTaGcrnDnBic646GLhZVoWntEtvNa8VAsC23",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWPgn23WdadmxEkpCYynbEtDsqJGjQP4GNP14seXheD4xg",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWFqL3sbuj4yZhHpiyngdUHLXf26ArYzmWAji8gZ7814KM"
   ]
 }
