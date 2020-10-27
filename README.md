@@ -28,7 +28,7 @@ Information for each network is stored in a JSON file. Currently information for
 
 This application builds a static site using Nuxt.js/Vue.js. The site is generated to the `/dist/` directory during the build process. Only this directory needs to be published.
 
-**This application fetches schemas and network information directly from `https://raw.githubusercontent.com/filecoin-project/network-info/master/...`. This means you cannot see or preview the changes you made until you merge to master** or change the fetch manually to a local urls. Master is automatically deployed so, good luck!
+**This application fetches schemas and network information directly from `https://raw.githubusercontent.com/filecoin-project/network-info/master/...`. This means you cannot see or preview the changes you made until you merge to master** or change the fetch manually to a local urls. Master is automatically deployed so, good luck! For major changes, you can deploy to the develop branch instead. The preview for this branch is generated at a different URL.
 
 ### Nuxt settings
 - Remove `mode` property from `nuxt.config.js`
