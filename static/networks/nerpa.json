@@ -53,20 +53,20 @@
     "Base": "https://github.com/filecoin-project/lotus/tree/",
     "Commit":"c827897334305b36b386a3eb75c57b283e313a69",
     "Branch":"ntwk-nerpa",
-    "Tag":"ntwk-nerpa-10.27.0"
+    "Tag":"ntwk-nerpa-11.04.0"
   },
   "Genesis":{
     "Car": {
-	"/": "QmXUcMBBJiNDeAGE5YRio45RcTLiYCtgfkX6mWyhnf9E6n"
+	"/": "QmRHRYqC1sEuM7zmYUeZhzPY1GNgGZPamgZF5xPUHc7b7Q"
     },
-    "Timestamp":"2020-10-27T15:34:00Z",
-    "BlockZeroCid":"bafy2bzacecoqihgsli767svu5iagwwuwkpqqa24ps3wqgfwbpv4prkcees3pm",
-    "Sha1Digest":"2994f194d971cefd1bd2f64d48d03841d93e6eca"
+    "Timestamp":"2020-11-03T14:33:00Z",
+    "BlockZeroCid":"bafy2bzacebdlmrducj22572ylai46h2vfubs4gr7f367zdfnicburn5gyqhxe",
+    "Sha1Digest":"742399221c7b1266e31d5da65fb4ca449dfd265f"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWBscfpDkMHL2zCPeHARxDj9NVJTD8XUMVMs6gzZhjt8RS",
-    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWKvPTUjuxbTaGcrnDnBic646GLhZVoWntEtvNa8VAsC23",
-    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWPgn23WdadmxEkpCYynbEtDsqJGjQP4GNP14seXheD4xg",
-    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWFqL3sbuj4yZhHpiyngdUHLXf26ArYzmWAji8gZ7814KM"
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWNfuGjtzWTVz8eJGZ2C3aJg2xLqorhsagu4LTWw6CwpK9",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWDfsxYk7dC6NNsHqZqqyMJCzkjZuXhjsmqBk3TUCBZLga",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWRZAGHmCCaa2gkYmnC4Q2TEwHGFSh6Fh1FFJ7RSXak5yN",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWBFxEigSKLvxJVdw3JziC9ePHHnyAn5LifWSqg2kttcth"
   ]
 }
