@@ -44,8 +44,12 @@
       "Link":"https://stats.filecoin.io/"
     },
     {
-      "Name":"Slack Channel: #fil-mainnet-announcements",
+      "Name":"Slack Channel for Updates: #fil-mainnet-announcements",
       "Link":"https://filecoinproject.slack.com/archives/C019UFEACBT"
+    },
+    {
+      "Name":"Slack Channel for Questions: #fil-mainnet",
+      "Link":"https://filecoinproject.slack.com/archives/C0179RNEMU4"
     },
     {
       "Name":"Block explorer: Filfox",
