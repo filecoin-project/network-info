@@ -44,9 +44,13 @@
       "Link":"https://stats.filecoin.io/"
     },
     {
-      "Name":"Slack Channel: #fil-testnet-announce",
-      "Link":"https://filecoin.io/slack"
+      "Name":"Slack Channel: #fil-mainnet-announcements",
+      "Link":"https://filecoinproject.slack.com/archives/C019UFEACBT"
     },
+    {
+      "Name":"Block explorer: Filfox",
+      "Link": "https://filfox.io/"
+    }
     {
       "Name":"Block explorer: Filscan",
       "Link": "https://filscan.io/"
@@ -62,10 +66,6 @@
     {
       "Name":"Block explorer: 1475 Explorer",
       "Link": "https://1475ipfs.com/#/blockBrowser"
-    },
-    {
-      "Name":"Block explorer: Filfox",
-      "Link": "https://filfox.io/"
     }
   ],
   "Git":{
