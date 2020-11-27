@@ -41,6 +41,14 @@
       "Link":"https://stats.calibration.fildev.network/"
     },
     {
+      "Name":"Slack Channel for Updates: #fil-net-calibration-announcements",
+      "Link":"https://filecoinproject.slack.com/archives/C019UFEACBT"
+    },
+    {
+      "Name":"Slack Channel for Questions: #fil-net-calibration-discuss",
+      "Link":"https://filecoinproject.slack.com/archives/C019UFEACBT"
+    },
+    {
       "Name":"Github",
       "Link": "https://github.com/filecoin-project/lotus"
     }
