@@ -41,6 +41,10 @@
       "Link":"https://stats.butterfly.fildev.network/"
     },
     {
+      "Name":"Slack Channel: #fil-net-butterfly-announce",
+      "Link":"https://filecoinproject.slack.com/archives/C019UFEACBT"
+    },
+    {
       "Name":"Github",
       "Link": "https://github.com/filecoin-project/lotus"
     }
