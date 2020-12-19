@@ -4,7 +4,7 @@
   "Description": "Mainnet began on block 148,888. It supports 32 GiB and 64 GiB sectors.",
   "Maintainer": "Protocol Labs",
   "Stability": "high",
-  "Status": "online",
+  "Status": "unstable",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
