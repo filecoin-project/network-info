@@ -4,7 +4,7 @@
   "Description": "This network suffers frequent resets and is not recommended for most users.",
   "Maintainer": "Protocol Labs",
   "Stability": "low",
-  "Status": "online",
+  "Status": "offline",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
