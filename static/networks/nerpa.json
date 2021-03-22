@@ -46,27 +46,26 @@
     },
     {
       "Name":"Github",
-      "Link": "https://github.com/filecoin-project/lotus/tree/ntwk-nerpa"
+      "Link": "https://github.com/filecoin-project/lotus/"
     }
   ],
   "Git":{
-    "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"c827897334305b36b386a3eb75c57b283e313a69",
-    "Branch":"ntwk-nerpa",
-    "Tag":"ntwk-nerpa-11.04.0"
+    "Base": "https://github.com/filecoin-project/lotus/",
+    "Commit":"b55ca92d339f3eeb09d5b6e059e82ee957156f7e",
+    "Branch":"release/v1.5.3",
   },
   "Genesis":{
     "Car": {
-	"/": "QmRHRYqC1sEuM7zmYUeZhzPY1GNgGZPamgZF5xPUHc7b7Q"
+	"/": "QmafjxC7tkb6JE3Wmwkdbm8ZWbkLEAwJG2kcryeXKjxtCY"
     },
-    "Timestamp":"2020-11-03T14:33:00Z",
-    "BlockZeroCid":"bafy2bzacebdlmrducj22572ylai46h2vfubs4gr7f367zdfnicburn5gyqhxe",
-    "Sha1Digest":"742399221c7b1266e31d5da65fb4ca449dfd265f"
+    "Timestamp":"2021-03-18T08:11:00Z",
+    "BlockZeroCid":"bafy2bzacedmcupeo44orsday5hgxcgyqxh7ooorsxbp7y3sbpthfpsz6jdjoq",
+    "Sha1Digest":"3ea01d319595a514fbe454e86ae50add94cafd88"
   },
   "BootstrapPeers":[
-    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWNfuGjtzWTVz8eJGZ2C3aJg2xLqorhsagu4LTWw6CwpK9",
-    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWDfsxYk7dC6NNsHqZqqyMJCzkjZuXhjsmqBk3TUCBZLga",
-    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWRZAGHmCCaa2gkYmnC4Q2TEwHGFSh6Fh1FFJ7RSXak5yN",
-    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWBFxEigSKLvxJVdw3JziC9ePHHnyAn5LifWSqg2kttcth"
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWGyJCwCm7EfupM15CFPXM4c7zRVHwwwjcuy9umaGeztMX",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWCWSaH6iUyXYspYxELjDfzToBsyVGVz3QvC7ysXv7wESo",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWQcL6ReWmR6ASWx4iT7EiAmxKDQpvgq1MKNTQZp5NPnWW",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWNK9RmfksKXSCQj7ZwAM7L6roqbN4kwJteihq7yPvSgPs"
   ]
 }
