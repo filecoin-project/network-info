@@ -1,0 +1,106 @@
+{
+  "Name":"mainnet",
+  "Summary": "Mainnet is the primary Filecoin network.",
+  "Description": "Mainnet began on block 148,888. It supports 32 GiB and 64 GiB sectors.",
+  "Maintainer": "Protocol Labs",
+  "Stability": "high",
+  "Status": "online",
+  "NetworkParameters":{
+    "SupportedProofTypes":[
+      {
+	"Name":"RegisteredSealProof_StackedDrg32GiBV1",
+	"Size":"34359738368",
+	"RegisteredSealProof": 3
+      },
+      {
+	"Name":"RegisteredSealProof_StackedDrg64GiBV1",
+	"Size":"68719476736",
+	"RegisteredSealProof": 4
+      }
+    ],
+    "ConsensusMinerMinPower": "10995116277760",
+    "EpochDurationSeconds": 30,
+    "ExpectedLeaderPerEpoch": 5,
+    "WPoStProvingPeriod": 2880,
+    "WPoStChallengeWindow": 60,
+    "WPoStPeriodDeadlines": 48,
+    "PreCommitChallengeDelay": 150
+  },
+  "ResourceLinks":[
+    {
+      "Name":"Latest chain snapshot (pruned)",
+      "Link":"https://fil-chain-snapshots-fallback.s3.amazonaws.com/mainnet/minimal_finality_stateroots_latest.car"
+    },
+    {
+      "Name":"Latest chain snapshot (full)",
+      "Link":"https://fil-chain-snapshots-fallback.s3.amazonaws.com/mainnet/complete_chain_with_finality_stateroots_latest.car"
+    },
+    {
+      "Name": "Status page and incidents",
+      "Link": "https://filecoin.statuspage.io"
+    },
+    {
+      "Name":"Stats Dashboard",
+      "Link":"https://stats.filecoin.io/"
+    },
+    {
+      "Name":"Slack Channel for Updates: #fil-mainnet-announcements",
+      "Link":"https://filecoinproject.slack.com/archives/C019UFEACBT"
+    },
+    {
+      "Name":"Slack Channel for Questions: #fil-mainnet",
+      "Link":"https://filecoinproject.slack.com/archives/C0179RNEMU4"
+    },
+    {
+      "Name":"Block explorer: Filfox",
+      "Link": "https://filfox.io/"
+    },
+    {
+      "Name":"Block explorer: Filscan",
+      "Link": "https://filscan.io/"
+    },
+    {
+      "Name":"Block explorer: Filscout",
+      "Link": "https://filscout.io/"
+    },
+    {
+      "Name":"Block explorer: Filplorer",
+      "Link": "https://filplorer.com/"
+    },
+    {
+      "Name":"Block explorer: 1475 Explorer",
+      "Link": "https://1475ipfs.com/#/blockBrowser"
+    }
+  ],
+  "Git":{
+    "Base": "https://github.com/filecoin-project/lotus/tree/",
+    "Commit":"3be4984d9db813016cb8eafcf7e1c6580b297b7d",
+    "Branch":"master",
+    "Tag":"v1.5.2"
+  },
+  "Genesis":{
+    "Car": {
+	"/": "QmavMCf95w2UMYGD1J5GpHcWBWXR2jTFYmtAkgeroMmpk1"
+    },
+    "Timestamp":"2020-08-24T22:00:00Z",
+    "BlockZeroCid":"bafy2bzacecnamqgqmifpluoeldx7zzglxcljo6oja4vrmtj7432rphldpdmm2",
+    "Sha1Digest":"4782cb42b4b01793b5cd9f593cc3dc87b6d3c7b4"
+  },
+  "BootstrapPeers":[
+    "/dns4/bootstrap-0.mainnet.filops.net/tcp/1347/p2p/12D3KooWCVe8MmsEMes2FzgTpt9fXtmCY7wrq91GRiaC8PHSCCBj",
+    "/dns4/bootstrap-1.mainnet.filops.net/tcp/1347/p2p/12D3KooWCwevHg1yLCvktf2nvLu7L9894mcrJR4MsBCcm4syShVc",
+    "/dns4/bootstrap-2.mainnet.filops.net/tcp/1347/p2p/12D3KooWEWVwHGn2yR36gKLozmb4YjDJGerotAPGxmdWZx2nxMC4",
+    "/dns4/bootstrap-3.mainnet.filops.net/tcp/1347/p2p/12D3KooWKhgq8c7NQ9iGjbyK7v7phXvG6492HQfiDaGHLHLQjk7R",
+    "/dns4/bootstrap-4.mainnet.filops.net/tcp/1347/p2p/12D3KooWL6PsFNPhYftrJzGgF5U18hFoaVhfGk7xwzD8yVrHJ3Uc",
+    "/dns4/bootstrap-5.mainnet.filops.net/tcp/1347/p2p/12D3KooWLFynvDQiUpXoHroV1YxKHhPJgysQGH2k3ZGwtWzR4dFH",
+    "/dns4/bootstrap-6.mainnet.filops.net/tcp/1347/p2p/12D3KooWP5MwCiqdMETF9ub1P3MbCvQCcfconnYHbWg6sUJcDRQQ",
+    "/dns4/bootstrap-7.mainnet.filops.net/tcp/1347/p2p/12D3KooWRs3aY1p3juFjPy8gPN95PEQChm2QKGUCAdcDCC4EBMKf",
+    "/dns4/bootstrap-8.mainnet.filops.net/tcp/1347/p2p/12D3KooWScFR7385LTyR4zU1bYdzSiiAb5rnNABfVahPvVSzyTkR",
+    "/dns4/lotus-bootstrap.forceup.cn/tcp/41778/p2p/12D3KooWFQsv3nRMUevZNWWsY1Wu6NUzUbawnWU5NcRhgKuJA37C",
+    "/dns4/bootstrap-0.starpool.in/tcp/12757/p2p/12D3KooWGHpBMeZbestVEWkfdnC9u7p6uFHXL1n7m1ZBqsEmiUzz",
+    "/dns4/bootstrap-1.starpool.in/tcp/12757/p2p/12D3KooWQZrGH1PxSNZPum99M1zNvjNFM33d1AAu5DcvdHptuU7u",
+    "/dns4/node.glif.io/tcp/1235/p2p/12D3KooWBF8cpp65hp2u9LK5mh19x67ftAam84z9LsfaquTDSBpt",
+    "/dns4/bootstrap-0.ipfsmain.cn/tcp/34721/p2p/12D3KooWQnwEGNqcM2nAcPtRR9rAX8Hrg4k9kJLCHoTR5chJfz6d",
+    "/dns4/bootstrap-1.ipfsmain.cn/tcp/34723/p2p/12D3KooWMKxMkD5DMpSWsW7dBddKxKT7L2GgbNuckz9otxvkvByP"
+  ]
+}

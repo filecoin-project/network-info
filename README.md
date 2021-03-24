@@ -1,15 +1,13 @@
 # Filecoin Network Information
 
-This repo contains information about all the active Filecoin networks. To follow steps to connect to a Filecoin network, please visit [Connect to a network](https://docs.filecoin.io/how-to/networks/) on the Filecoin Documentation site. The information in this repo will soon be automatically rendered onto a separate website or the Filecoin Documentation site.
+This repo is the source of https://network.filecoin.io and contains information about all the active Filecoin networks. It is the source of truth for all network information, related links etc. and should be the only place where this information is maintained.
 
-## Current Active Networks and Usage Information
-
-See [this page](https://docs.filecoin.io/how-to/networks/) on the Filecoin Documentation Site.
-
+For information about how to connect to a network using a Filecoin node (i.e. Lotus), check the Filecoin documentation: https://docs.filecoin.io
 ## Network Information Data Model
 
 For each Filecoin network, we include the following information:
 - Network name
+- Network summary and description
 - Network status:
   - 🔴 Network down for all participants
   - 🟡 Network is unstable (down for some participants, but not all)
@@ -29,6 +27,8 @@ Information for each network is stored in a JSON file. Currently information for
 ## Build & Deploy
 
 This application builds a static site using Nuxt.js/Vue.js. The site is generated to the `/dist/` directory during the build process. Only this directory needs to be published.
+
+**This application fetches schemas and network information directly from `https://raw.githubusercontent.com/filecoin-project/network-info/master/...`. This means you cannot see or preview the changes you made until you merge to master** or change the fetch manually to a local urls. Master is automatically deployed so, good luck! For major changes, you can deploy to the develop branch instead. The preview for this branch is generated at a different URL.
 
 ### Nuxt settings
 - Remove `mode` property from `nuxt.config.js`

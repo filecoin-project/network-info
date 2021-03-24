@@ -1,0 +1,71 @@
+{
+  "Name":"nerpa",
+  "Summary":"For app developers looking to do small-scale testing. Has small sector sizes and reduced proofs parameters, so sealing takes ~25 minutes.",
+  "Description": "The Nerpa network was named after a <a href=\"https://en.wikipedia.org/wiki/Baikal_seal\">species of seal</a>, one of the smallest true seals.",
+  "Maintainer": "Digital Mob",
+  "Stability": "low",
+  "Status": "online",
+  "NetworkParameters":{
+    "SupportedProofTypes":[
+      {
+	"Name":"RegisteredSealProof_StackedDrg512MiBV1",
+	"Size":"536870912",
+	"RegisteredSealProof": 2
+      },
+      {
+	"Name":"RegisteredSealProof_StackedDrg32GiBV1",
+	"Size":"34359738368",
+	"RegisteredSealProof": 3
+      },
+      {
+	"Name":"RegisteredSealProof_StackedDrg64GiBV1",
+	"Size":"68719476736",
+	"RegisteredSealProof": 4
+      }
+    ],
+    "ConsensusMinerMinPower": "4294967296",
+    "EpochDurationSeconds": 30,
+    "ExpectedLeaderPerEpoch": 5,
+    "WPoStProvingPeriod": 2880,
+    "WPoStChallengeWindow": 60,
+    "WPoStPeriodDeadlines": 48,
+    "PreCommitChallengeDelay": 150
+  },
+  "ResourceLinks":[
+    {
+      "Name":"Faucet",
+      "Link":"https://faucet.nerpa.interplanetary.dev/"
+    },
+    {
+      "Name":"Stats Dashboard",
+      "Link":"https://stats.nerpa.interplanetary.dev/"
+    },
+    {
+      "Name":"Slack Channel: #fil-net-nerpa-announce",
+      "Link":"https://filecoinproject.slack.com/archives/C016VJSJNTH"
+    },
+    {
+      "Name":"Github",
+      "Link": "https://github.com/filecoin-project/lotus/"
+    }
+  ],
+  "Git":{
+    "Base": "https://github.com/filecoin-project/lotus/",
+    "Commit":"b55ca92d339f3eeb09d5b6e059e82ee957156f7e",
+    "Branch":"release/v1.5.3"
+  },
+  "Genesis":{
+    "Car": {
+	"/": "QmafjxC7tkb6JE3Wmwkdbm8ZWbkLEAwJG2kcryeXKjxtCY"
+    },
+    "Timestamp":"2021-03-18T08:11:00Z",
+    "BlockZeroCid":"bafy2bzacedmcupeo44orsday5hgxcgyqxh7ooorsxbp7y3sbpthfpsz6jdjoq",
+    "Sha1Digest":"3ea01d319595a514fbe454e86ae50add94cafd88"
+  },
+  "BootstrapPeers":[
+    "/dns4/bootstrap-0.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWGyJCwCm7EfupM15CFPXM4c7zRVHwwwjcuy9umaGeztMX",
+    "/dns4/bootstrap-1.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWCWSaH6iUyXYspYxELjDfzToBsyVGVz3QvC7ysXv7wESo",
+    "/dns4/bootstrap-2.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWQcL6ReWmR6ASWx4iT7EiAmxKDQpvgq1MKNTQZp5NPnWW",
+    "/dns4/bootstrap-3.nerpa.interplanetary.dev/tcp/1347/p2p/12D3KooWNK9RmfksKXSCQj7ZwAM7L6roqbN4kwJteihq7yPvSgPs"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "Name":"calibration",
+  "Summary": "Calibration is the primary live testing network. It is used to evaluate Filecoin at meaningful scale via testing, benchmarking, and optimizations. It is recommended for most prospective miners and app developers.",
+  "Description": "Calibration network is the most realistic simulation of the Filecoin mainnet:<br /><br />- Prospective storage miners can experience more realistic sealing performance and hardware requirements due to the use of final proofs constructions and parameters<br />  - Prospective storage clients can store and retrieve real data on the network. Clients can participate in deal-making workflows and storage + retrieval functionality.<br />  - Same as mainnet, the calibration network supports 32 GiB and 64 GiB sectors with an additional 512MiB sector.",
+  "Maintainer": "Protocol Labs",
+  "Stability": "moderate",
+  "Status": "online",
+  "NetworkParameters":{
+    "SupportedProofTypes":[
+      {
+        "Name":"RegisteredSealProof_StackedDrg32GiBV1",
+        "Size":"34359738368",
+        "RegisteredSealProof": 3
+      },
+      {
+        "Name":"RegisteredSealProof_StackedDrg64GiBV1",
+        "Size":"68719476736",
+        "RegisteredSealProof": 4
+      }
+    ],
+    "ConsensusMinerMinPower": "34359738368",
+    "EpochDurationSeconds": 30,
+    "ExpectedLeaderPerEpoch": 5,
+    "WPoStProvingPeriod": 2880,
+    "WPoStChallengeWindow": 60,
+    "WPoStPeriodDeadlines": 48,
+    "PreCommitChallengeDelay": 150
+  },
+  "ResourceLinks":[
+    {
+      "Name":"Faucet",
+      "Link":"https://faucet.calibration.fildev.network/"
+    },
+    {
+      "Name":"Stats Dashboard",
+      "Link":"https://stats.calibration.fildev.network/"
+    },
+    {
+      "Name":"Slack Channel for Updates: #fil-net-calibration-announce",
+      "Link":"https://filecoinproject.slack.com/archives/C01C5PT7ETC"
+    },
+    {
+      "Name":"Slack Channel for Questions: #fil-net-calibration-discuss",
+      "Link":"https://filecoinproject.slack.com/archives/C01D42NNLMS"
+    },
+    {
+      "Name":"Calibration Block explorer: Filfox",
+      "Link": "https://calibration.filscan.io/"
+    }
+  ],
+  "Git":{
+    "Base": "https://github.com/filecoin-project/lotus/tree/",
+    "Commit":"d1abc3cb5feaaf275dbb7431c259a67ba437c709",
+    "Branch":"master",
+    "Tag":"v1.5.0-rc2"
+  },
+  "Genesis":{
+    "Car": {
+        "/": "QmY581cXXtNwHweiC69jECupu9EBx274huHjSgxPNv1zAA"
+    },
+    "Timestamp":"2021-02-19T23:10:00Z",
+    "BlockZeroCid":"bafy2bzaceapb7hfdkewspic7udnogw4xnhjvhm74xy5snwa24forre5z4s2lm",
+    "Sha1Digest":"944c0c13172b9f552dfed5dfaffaba95113c8254"
+  },
+  "BootstrapPeers":[
+    "/dns4/bootstrap-0.calibration.fildev.network/tcp/1347/p2p/12D3KooWRLZAseMo9h7fRD6ojn6YYDXHsBSavX5YmjBZ9ngtAEec",
+    "/dns4/bootstrap-1.calibration.fildev.network/tcp/1347/p2p/12D3KooWJFtDXgZEQMEkjJPSrbfdvh2xfjVKrXeNFG1t8ioJXAzv",
+    "/dns4/bootstrap-2.calibration.fildev.network/tcp/1347/p2p/12D3KooWP1uB9Lo7yCA3S17TD4Y5wStP5Nk7Vqh53m8GsFjkyujD",
+    "/dns4/bootstrap-3.calibration.fildev.network/tcp/1347/p2p/12D3KooWLrPM4WPK1YRGPCUwndWcDX8GCYgms3DiuofUmxwvhMCn"
+  ]
+}
