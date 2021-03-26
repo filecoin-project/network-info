@@ -51,8 +51,8 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/",
-    "Commit":"b55ca92d339f3eeb09d5b6e059e82ee957156f7e",
-    "Branch":"release/v1.5.3"
+    "Commit":"3e6dcb578b1a6d7b5ec60cfe3e37601a44fe071a",
+    "Tag":"v1.5.3"
   },
   "Genesis":{
     "Car": {
