@@ -52,7 +52,6 @@
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/",
     "Commit":"3e6dcb578b1a6d7b5ec60cfe3e37601a44fe071a",
-    "Branch":"master",
     "Tag":"v1.5.3"
   },
   "Genesis":{
