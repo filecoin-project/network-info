@@ -44,15 +44,18 @@
       "Link":"https://filecoinproject.slack.com/archives/C01D42NNLMS"
     },
     {
-      "Name":"Calibration Block explorer: Filfox",
+      "Name":"Block explorer for Calibration:",
       "Link": "https://calibration.filscan.io/"
     }
   ],
   "Git":{
-    "Base": "https://github.com/filecoin-project/lotus/tree/",
-    "Commit":"d1abc3cb5feaaf275dbb7431c259a67ba437c709",
-    "Branch":"master",
-    "Tag":"v1.5.0-rc2"
+    "Base": "https://github.com/filecoin-project/lotus/",
+    "Commit":"f357530efc3ccc7d07505068dfd4d7a74e968bb0",
+    "Tag":"v1.6.0-rc1"
+  },
+  "Build":{
+    "Build Instruction": "make clean && make calibnet",
+    "Docs": "https://docs.filecoin.io/get-started/lotus/installation/"
   },
   "Genesis":{
     "Car": {
