@@ -50,8 +50,8 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/",
-    "Commit":"f357530efc3ccc7d07505068dfd4d7a74e968bb0",
-    "Tag":"v1.6.0-rc1"
+    "Commit":"5c56017dbb6385bfaa63c0a22caaff9798fa3baa",
+    "Tag":"v1.8.0"
   },
   "Build":{
     "Build Instruction": "make clean && make calibnet",
