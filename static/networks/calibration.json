@@ -49,7 +49,7 @@
     }
   ],
   "Git":{
-    "Base": "https://github.com/filecoin-project/lotus/",
+    "Base": "https://github.com/filecoin-project/lotus/commits/release/v1.10.0",
     "Commit":"fd15080ead5c8332c5f9124ebde02c66e7bcbf41",
     "Tag":"Pending"
   },
