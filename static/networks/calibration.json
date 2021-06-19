@@ -44,7 +44,11 @@
       "Link":"https://filecoinproject.slack.com/archives/C01D42NNLMS"
     },
     {
-      "Name":"Block explorer for Calibration:",
+      "Name":"Block explorer - Filscout for Calibration",
+      "Link": "https://calibration.filscout.com/en"
+    },
+    {
+      "Name":"Block explorer - filscan for Calibration",
       "Link": "https://calibration.filscan.io/"
     }
   ],
