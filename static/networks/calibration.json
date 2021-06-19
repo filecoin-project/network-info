@@ -49,9 +49,9 @@
     }
   ],
   "Git":{
-    "Base": "https://github.com/filecoin-project/lotus/commits/release/v1.10.0",
-    "Commit":"fd15080ead5c8332c5f9124ebde02c66e7bcbf41",
-    "Tag":"Pending"
+    "Base": "https://github.com/filecoin-project/lotus/",
+    "Commit":"a641a03908f748a1078bfcbb21b02cf0ff38bbe0",
+    "Tag":"v1.10.0-rc6"
   },
   "Build":{
     "Build Instruction": "make clean && make calibnet",
