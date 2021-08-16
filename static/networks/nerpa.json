@@ -4,7 +4,7 @@
   "Description": "The Nerpa network was named after a <a href=\"https://en.wikipedia.org/wiki/Baikal_seal\">species of seal</a>, one of the smallest true seals.",
   "Maintainer": "Digital Mob",
   "Stability": "moderate",
-  "Status": "online",
+  "Status": "offline",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
@@ -51,8 +51,8 @@
   ],
   "Git":{
     "Base": "https://github.com/filecoin-project/lotus/",
-    "Commit":"ada7f97ba86a13b3fbe497021c9f3c939c617285",
-    "Tag":"v1.9.0"
+    "Commit":"19048e6a91e9e0e74b32eefd53b6c836e2311318",
+    "Tag":"nerpa-v1.11.1-dev"
   },
   "Build":{
     "Build Instruction": "make clean && make nerpanet",
