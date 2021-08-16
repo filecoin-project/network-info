@@ -4,7 +4,7 @@
   "Description": "The Nerpa network was named after a <a href=\"https://en.wikipedia.org/wiki/Baikal_seal\">species of seal</a>, one of the smallest true seals.",
   "Maintainer": "Digital Mob",
   "Stability": "moderate",
-  "Status": "online",
+  "Status": "offline",
   "NetworkParameters":{
     "SupportedProofTypes":[
       {
