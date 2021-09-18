@@ -20,7 +20,6 @@ For each Filecoin network, we include the following information:
 - Addresses for the bootstrap peers on this network
 
 Information for each network is stored in a JSON file. Currently information for each network can be found on the [this page](https://docs.filecoin.io/how-to/networks/) on the Filecoin Documentation Site, or on the respective information page for each network:
-- `nerpa` network: https://www.nerpa.fildev.network/
 - `butterfly` network: https://www.butterfly.fildev.network/
 - `calibration` network: https://www.calibration.fildev.network/
 
