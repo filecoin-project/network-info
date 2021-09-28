@@ -1,3 +1,9 @@
+# DEPRECATED 2021-09-28
+
+functionality replaced by https://status.filecoin.io
+
+<br>
+
 # Filecoin Network Information
 
 This repo is the source of https://network.filecoin.io and contains information about all the active Filecoin networks. It is the source of truth for all network information, related links etc. and should be the only place where this information is maintained.
